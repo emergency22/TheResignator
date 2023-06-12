@@ -1,0 +1,20 @@
+html {
+    height: 100%;
+    background: url(../images/helmet.PNG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header {
+    float: left;
+    box-shadow: -3px 6px 4px #222;
+    height: 50px;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+            -45deg,
+            transparent 0 20px,
+            rgb(201, 250, 6) 20px 40px
+    );
+}
