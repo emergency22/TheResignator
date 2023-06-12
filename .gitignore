@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a47da0fddeac2257f68d2f0c6be949562c2955b4
 # Compiled class file
 *.class
 
@@ -23,6 +26,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
 =======
 .gradle
 build/
@@ -67,3 +71,5 @@ bin/
 ### Mac OS ###
 .DS_Store
 >>>>>>> 8bea94a (First commit)
+=======
+>>>>>>> a47da0fddeac2257f68d2f0c6be949562c2955b4
