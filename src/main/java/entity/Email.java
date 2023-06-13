@@ -4,10 +4,7 @@ public class Email {
     private final String recipientAddress;
     private final String recipientName;
     private final String position;
-
     private final String organization;
-    private String subject;
-    private String body;
     private final String signature;
     private final String senderAddress;
     private final String senderPhone;
@@ -19,8 +16,6 @@ public class Email {
         this.recipientName = recipientName;
         this.position = position;
         this.organization = organization;
-        this.subject = generateSubject();
-        this.body = generateBody();
         this.signature = signature;
         this.senderAddress = senderAddress;
         this.senderPhone = senderPhone;
@@ -52,14 +47,6 @@ public class Email {
         return organization;
     }
 
-    public String getSubject() {
-        return subject;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
     public String getSignature() {
         return signature;
     }
@@ -80,5 +67,4 @@ public class Email {
         return lastDay;
     }
 
-    
 }

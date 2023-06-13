@@ -8,7 +8,13 @@ import java.util.Date;
 
 public class EmailGeneratorService {
 
-    public Email generateEmail(EmailGenerationRequest emailGenerationRequest) {
+//    EmailFormatterService emailFormatterService;
+//
+//    public EmailGeneratorService(EmailFormatterService emailFormatterService) {
+//        this.emailFormatterService = emailFormatterService;
+//    }
+
+    private Email generateEmail(EmailGenerationRequest emailGenerationRequest) {
         String recipientAddress = emailGenerationRequest.getRecipientAddress();
         String recipientName = emailGenerationRequest.getRecipientName();
         String position = emailGenerationRequest.getPosition();
