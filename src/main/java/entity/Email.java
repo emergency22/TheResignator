@@ -3,6 +3,9 @@ package entity;
 public class Email {
     private final String recipientAddress;
     private final String recipientName;
+    private final String position;
+
+    private final String organization;
     private String subject;
     private String body;
     private final String signature;
@@ -11,9 +14,11 @@ public class Email {
     private final String executionDate;
     private final String lastDay;
 
-    public Email(String recipientAddress, String recipientName, String signature, String senderAddress, String senderPhone, String executionDate, String lastDay) {
+    public Email(String recipientAddress, String recipientName, String position, String organization, String signature, String senderAddress, String senderPhone, String executionDate, String lastDay) {
         this.recipientAddress = recipientAddress;
         this.recipientName = recipientName;
+        this.position = position;
+        this.organization = organization;
         this.subject = generateSubject();
         this.body = generateBody();
         this.signature = signature;
@@ -37,6 +42,14 @@ public class Email {
 
     public String getRecipientName() {
         return recipientName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getOrganization() {
+        return organization;
     }
 
     public String getSubject() {
@@ -66,4 +79,6 @@ public class Email {
     public String getLastDay() {
         return lastDay;
     }
+
+    
 }
