@@ -44,6 +44,9 @@ public class EmailFormatterService {
                 .append(email.getSenderAddress()).append("\n")
                 .append(email.getSenderPhone());
 
+        //for testing
+        System.out.println(emailContent.toString());
+
         return emailContent.toString();
     }
 
