@@ -16,10 +16,10 @@ public class EmailGeneratorService {
 
     private Email generateEmail(EmailGenerationRequest emailGenerationRequest) {
         String recipientAddress = emailGenerationRequest.getRecipientAddress();
-        String recipientName = emailGenerationRequest.getRecipientName();
+        String recipientName = emailGenerationRequest.getRecipientFirstName();
         String position = emailGenerationRequest.getPosition();
         String organization = emailGenerationRequest.getOrganization();
-        String signature = emailGenerationRequest.getSignature();
+        String signature = emailGenerationRequest.getSenderFirstName();
         String senderAddress = emailGenerationRequest.getSenderAddress();
         String senderPhone = emailGenerationRequest.getSenderPhone();
         SimpleDateFormat executionDate = emailGenerationRequest.getExecutionDate();

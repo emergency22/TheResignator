@@ -1,14 +1,14 @@
 package service.request;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class EmailGenerationRequest {
     private final String recipientAddress;
-    private final String recipientName;
+    private final String recipientFirstName;
     private final String position;
     private final String organization;
-    private final String signature;
+    private final String senderFirstName;
+    private final String senderLastName;
     private final String senderAddress;
     private final String senderPhone;
 
@@ -16,12 +16,13 @@ public class EmailGenerationRequest {
 
     private final SimpleDateFormat lastDay;
 
-    public EmailGenerationRequest(String recipientAddress, String recipientName, String position, String organization, String signature, String senderAddress, String senderPhone, SimpleDateFormat executionDate, SimpleDateFormat lastDay) {
+    public EmailGenerationRequest(String recipientAddress, String recipientFirstName, String senderLastName, String position, String organization, String senderFirstName, String senderAddress, String senderPhone, SimpleDateFormat executionDate, SimpleDateFormat lastDay) {
         this.recipientAddress = recipientAddress;
-        this.recipientName = recipientName;
+        this.recipientFirstName = recipientFirstName;
         this.position = position;
         this.organization = organization;
-        this.signature = signature;
+        this.senderFirstName = senderFirstName;
+        this.senderLastName = senderLastName;
         this.senderAddress = senderAddress;
         this.senderPhone = senderPhone;
         this.executionDate = executionDate;
@@ -32,8 +33,8 @@ public class EmailGenerationRequest {
         return recipientAddress;
     }
 
-    public String getRecipientName() {
-        return recipientName;
+    public String getRecipientFirstName() {
+        return recipientFirstName;
     }
 
     public String getPosition() {
@@ -44,8 +45,8 @@ public class EmailGenerationRequest {
         return organization;
     }
 
-    public String getSignature() {
-        return signature;
+    public String getSenderFirstName() {
+        return senderFirstName;
     }
 
     public String getSenderAddress() {
