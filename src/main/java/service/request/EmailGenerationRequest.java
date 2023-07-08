@@ -29,6 +29,8 @@ public class EmailGenerationRequest {
         this.lastDay = lastDay;
     }
 
+
+
     public String getRecipientAddress() {
         return recipientAddress;
     }
