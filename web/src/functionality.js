@@ -4,7 +4,7 @@ function confirmQuit(event) {
     const quitJob = "Quit my job";
     const cancel = "Cancel";
 
-    const confirmation = confirm("Are you sure you want to quit your job? There are no takesies backsies.");
+    const confirmation = confirm("There are no takesies backsies. \n \n Press OK to quit your job, or Cancel to stay in your job.");
 
     if (confirmation) {
         // User clicked "OK" or "Yes"
