@@ -1,3 +1,35 @@
+function displayForm() {
+    document.getElementById('theFormArea').innerHTML = `<form id="theForm">
+        <input type="text" id="firstName" name="firstName" class="boxSize" placeholder="Your First Name" required><br><br>
+
+        <input type="text" id="lastName" name="lastName" class="boxSize" placeholder="Your Last Name" required><br><br>
+
+        <input type="text" id="position" name="position" class="boxSize" placeholder="Your Title/Position" required><br><br>
+
+        <input type="text" id="organization" name="organization" class="boxSize" placeholder="Name of your Organization" required><br><br>
+
+        <input type="text" id="recipientFirstName" name="recipientFirstName" class="boxSize" placeholder="First Name of Your Supervisor" required><br><br>
+
+        <input type="text" id="recipientEmail" name="recipientEmail" class="boxSize" placeholder="Your Supervisor's Email Address" required><br><br>
+
+        <label htmlFor="executionDate">Select a day to send your resignation notice:</label>
+        <input type="date" id="executionDate" name="executionDate" required><br><br>
+
+        <label htmlFor="lastDay">Select a last day of employment:</label>
+        <input type="date" id="lastDay" name="lastDay" required><br><br>
+
+        <div class="text-center">
+            <input type="submit" value="Submit" class="btn btn-success" onClick="confirmQuit(event)">
+        </div>`;
+}
+
+export default class Functionality {
+    constructor() {
+        displayForm();
+    }
+}
+
+
 function confirmQuit(event) {
     event.preventDefault(); // Prevents the default form submission
 
