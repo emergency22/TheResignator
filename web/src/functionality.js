@@ -1,4 +1,9 @@
-    document.addEventListener('DOMContentLoaded', function() {
+// import * as quitClient from './quietClient.js';
+// import QuitClient from './quietClient.js';
+//
+// const quitClient = new QuitClient();
+
+document.addEventListener('DOMContentLoaded', function() {
         displayForm();
     });
 
@@ -64,7 +69,7 @@
                 const executionDate = formData.get('executionDate');
                 const lastDay = formData.get('lastDay');
 
-                quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
+                quitClient.quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
 
                 document.getElementById('ready').innerHTML = "";
                 document.getElementById('theFormArea').innerHTML = "";
@@ -74,6 +79,10 @@
             } else {
                 // User clicked "Cancel" or "No"
                 // Do nothing or perform any other desired action
+                document.getElementById('ready').innerHTML = "";
+                document.getElementById('theFormArea').innerHTML = "";
+                document.getElementById('theFormArea').innerHTML +=
+                    `<h5><div class="text-center">Cancelled. Maybe go for a hike instead? <a href="https://www.nps.gov">https://www.nps.gov</a></div></h5><br><br>`;
                 console.log("Job quitting canceled.");
             }
         } else {
