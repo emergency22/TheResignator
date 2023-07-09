@@ -1,12 +1,6 @@
 export class QuitClient {
-
-    quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
+    quitThisJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
+        console.log("QUITTTT!!!");
         return null;
     }
-
-
-
-
-
-
 }
