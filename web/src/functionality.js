@@ -1,5 +1,11 @@
-function displayForm() {
-    document.getElementById('theFormArea').innerHTML = `<form id="theForm">
+    document.addEventListener('DOMContentLoaded', function() {
+        displayForm();
+    });
+
+    function displayForm() {
+        document.getElementById('theFormArea').innerHTML = "";
+
+        document.getElementById('theFormArea').innerHTML += `<form id="theForm">
         <input type="text" id="firstName" name="firstName" class="boxSize" placeholder="Your First Name" required><br><br>
 
         <input type="text" id="lastName" name="lastName" class="boxSize" placeholder="Your Last Name" required><br><br>
@@ -21,34 +27,28 @@ function displayForm() {
         <div class="text-center">
             <input type="submit" value="Submit" class="btn btn-success" onClick="confirmQuit(event)">
         </div>`;
-}
-
-export default class Functionality {
-    constructor() {
-        displayForm();
     }
-}
 
+    function confirmQuit(event) {
+        event.preventDefault(); // Prevents the default form submission
 
-function confirmQuit(event) {
-    event.preventDefault(); // Prevents the default form submission
+        const quitJob = "Quit my job";
+        const cancel = "Cancel";
 
-    const quitJob = "Quit my job";
-    const cancel = "Cancel";
+        const confirmation = confirm("There are no takesies backsies. \n \n Press OK to quit your job, or Cancel to stay in your job.");
 
-    const confirmation = confirm("There are no takesies backsies. \n \n Press OK to quit your job, or Cancel to stay in your job.");
-
-    if (confirmation) {
-        // User clicked "OK" or "Yes"
-        // Perform the action to quit the job
-        // Replace this with your own logic or redirect to a new page
-        console.log("Quitting job...");
-    } else {
-        // User clicked "Cancel" or "No"
-        // Do nothing or perform any other desired action
-        console.log("Job quitting canceled.");
+        if (confirmation) {
+            // User clicked "OK" or "Yes"
+            // Perform the action to quit the job
+            // Replace this with your own logic or redirect to a new page
+            console.log("Quitting job...");
+        } else {
+            // User clicked "Cancel" or "No"
+            // Do nothing or perform any other desired action
+            console.log("Job quitting canceled.");
+        }
     }
-}
+
 
 
 
