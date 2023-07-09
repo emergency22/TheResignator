@@ -29,28 +29,60 @@
         </div>`;
     }
 
-    function confirmQuit(event) {
+    async function confirmQuit(event) {
         event.preventDefault(); // Prevents the default form submission
 
         const quitJob = "Quit my job";
         const cancel = "Cancel";
 
-        const confirmation = confirm("There are no takesies backsies. \n \n Press OK to quit your job, or Cancel to stay in your job.");
+        const submissionData = document.getElementById('theForm');
+        const formData = new FormData(submissionData);
 
-        if (confirmation) {
-            // User clicked "OK" or "Yes"
-            // Perform the action to quit the job
-            // Replace this with your own logic or redirect to a new page
-            document.getElementById('ready').innerHTML = "";
-            document.getElementById('theFormArea').innerHTML = "";
-            document.getElementById('theFormArea').innerHTML +=
-                `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br>`;
-            console.log("Quitting job...");
+        // Check if any field is empty
+        let isValid = true;
+        formData.forEach((value) => {
+            if (value.trim() === '') {
+                isValid = false;
+                return;
+            }
+        });
+
+        if (isValid) {
+            const confirmation = confirm(
+                "There are no takesies backsies. \n \n Press OK to quit your job, or Cancel to stay in your job."
+            );
+
+            if (confirmation) {
+                // User clicked "OK" or "Yes"
+                // Perform the action to quit the job
+                const firstName = formData.get('firstName');
+                const lastName = formData.get('lastName');
+                const position = formData.get('position');
+                const organization = formData.get('organization');
+                const recipientFirstName = formData.get('recipientFirstName');
+                const recipientEmail = formData.get('recipientEmail');
+                const executionDate = formData.get('executionDate');
+                const lastDay = formData.get('lastDay');
+
+                quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
+
+                document.getElementById('ready').innerHTML = "";
+                document.getElementById('theFormArea').innerHTML = "";
+                document.getElementById('theFormArea').innerHTML +=
+                    `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br>`;
+                console.log("Quitting job...");
+            } else {
+                // User clicked "Cancel" or "No"
+                // Do nothing or perform any other desired action
+                console.log("Job quitting canceled.");
+            }
         } else {
-            // User clicked "Cancel" or "No"
-            // Do nothing or perform any other desired action
-            console.log("Job quitting canceled.");
+            alert("Please fill in all the required fields.");
         }
+    }
+
+    async function quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
+        await this.client.quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
     }
 
 
