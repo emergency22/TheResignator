@@ -80,25 +80,3 @@
             alert("Please fill in all the required fields.");
         }
     }
-
-    async function quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
-        await this.client.quitJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
-    }
-
-
-
-
-// addHoseFormSubmitter(fireDept, apparatusTypeAndNumber) {
-//     var addHoseFormToClient = document.getElementById('addHoseForm');
-//     addHoseFormToClient.addEventListener('submit', async (event) => {
-//         event.preventDefault()  //prevents auto-submit
-//
-//         var inputName = document.getElementById('name').value;
-//         var inputColor = document.getElementById('colorSelector').value;
-//         var inputLength = document.getElementById('lengthSelector').value;
-//         var inputDiameter = document.getElementById('diameterSelector').value;
-//         var inputGallons = document.getElementById('gpmSelector').value;
-//
-//         await this.client.addHose(fireDept, apparatusTypeAndNumber, inputName, inputColor, inputLength, inputDiameter, inputGallons);
-//         await this.displayHoses(fireDept, apparatusTypeAndNumber);
-//     });
