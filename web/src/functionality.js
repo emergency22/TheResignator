@@ -41,6 +41,10 @@
             // User clicked "OK" or "Yes"
             // Perform the action to quit the job
             // Replace this with your own logic or redirect to a new page
+            document.getElementById('ready').innerHTML = "";
+            document.getElementById('theFormArea').innerHTML = "";
+            document.getElementById('theFormArea').innerHTML +=
+                `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br>`;
             console.log("Quitting job...");
         } else {
             // User clicked "Cancel" or "No"
