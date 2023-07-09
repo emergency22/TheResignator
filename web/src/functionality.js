@@ -4,8 +4,8 @@ const quitClient = new QuitClient();
     async function confirmQuit(event) {
         event.preventDefault(); // Prevents the default form submission
 
-        const quitJob = "Quit my job";
-        const cancel = "Cancel";
+        // const quitJob = "Quit my job";
+        // const cancel = "Cancel";
 
         const submissionData = document.getElementById('theForm');
         const formData = new FormData(submissionData);
@@ -47,6 +47,7 @@ const quitClient = new QuitClient();
                 // User clicked "Cancel" or "No"
                 // Do nothing or perform any other desired action
                 document.getElementById('ready').innerHTML = "";
+                document.getElementById('disclaimer').innerHTML = "";
                 document.getElementById('theFormArea').innerHTML = "";
                 document.getElementById('theFormArea').innerHTML +=
                     `<h5><div class="text-center">Cancelled. Maybe go for a hike instead? <a href="https://www.nps.gov">https://www.nps.gov</a></div></h5><br><br>`;
