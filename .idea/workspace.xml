@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Add SDK.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/ResignatorApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Entity/Email.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/EmailFormatterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormatterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/EmailGeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailGeneratorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/request/EmailGenerationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/quitClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/quitClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/paidUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/paidUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Refactor directories. Spring Web not implemented but Axios is&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +116,7 @@
       <workItem from="1689008625567" duration="82000" />
       <workItem from="1689008716570" duration="23000" />
       <workItem from="1689008745697" duration="6741000" />
-      <workItem from="1689026471914" duration="423000" />
+      <workItem from="1689026471914" duration="524000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -141,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688956664891</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor directories. Spring Web not implemented but Axios is&quot;">
+      <option name="closed" value="true" />
+      <created>1689026952777</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689026952777</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add SDK." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add SDK." />
+    <MESSAGE value="Refactor directories. Spring Web not implemented but Axios is&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor directories. Spring Web not implemented but Axios is&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
