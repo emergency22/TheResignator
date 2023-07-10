@@ -1,7 +1,7 @@
-package service;
+package com.murillo.alex.resignatorservice.Activity;
 
-import entity.Email;
-import service.request.EmailGenerationRequest;
+import com.murillo.alex.resignatorservice.Entity.Email;
+import com.murillo.alex.resignatorservice.Activity.Requests.EmailGenerationRequest;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
