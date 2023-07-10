@@ -1,6 +1,6 @@
-package service;
+package com.murillo.alex.resignatorservice.Activity;
 
-import entity.Email;
+import com.murillo.alex.resignatorservice.Entity.Email;
 
 public class EmailFormatterService {
 

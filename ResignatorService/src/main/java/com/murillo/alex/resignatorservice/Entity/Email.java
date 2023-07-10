@@ -1,4 +1,4 @@
-package entity;
+package com.murillo.alex.resignatorservice.Entity;
 
 public class Email {
     private final String recipientAddress;

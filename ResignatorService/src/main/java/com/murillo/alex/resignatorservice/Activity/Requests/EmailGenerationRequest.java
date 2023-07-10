@@ -1,4 +1,4 @@
-package service.request;
+package com.murillo.alex.resignatorservice.Activity.Requests;
 
 import java.text.SimpleDateFormat;
 

@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="">
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Add SDK.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/ResignatorApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/web/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Entity/Email.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/EmailFormatterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormatterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/EmailGeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailGeneratorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/request/EmailGenerationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/quitClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/quitClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/paidUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/paidUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +30,40 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TheResignator" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TheResignator" type="f1a62948:ProjectNode" />
+                <item name="web" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TheResignator" type="f1a62948:ProjectNode" />
+                <item name="web" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="package.json" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,14 +83,21 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mcfdf/GoogleDrive/A.D. Murillo LLC/Job Quitting Service/TheResignator/TheResignator/web/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mcfdf/OneDrive/Desktop/FC&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Program Files/nodejs/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.25287357&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -59,6 +106,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\web\src" />
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\web\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\ResignatorService" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,11 +124,35 @@
       <workItem from="1688687918318" duration="2125000" />
       <workItem from="1688690065166" duration="352000" />
       <workItem from="1688690429139" duration="11796000" />
-      <workItem from="1688936958147" duration="8070000" />
+      <workItem from="1688936958147" duration="14378000" />
+      <workItem from="1689002360681" duration="2237000" />
+      <workItem from="1689005004324" duration="39000" />
+      <workItem from="1689005051021" duration="3154000" />
+      <workItem from="1689008625567" duration="82000" />
+      <workItem from="1689008716570" duration="23000" />
+      <workItem from="1689008745697" duration="6741000" />
+      <workItem from="1689026471914" duration="423000" />
     </task>
+    <task id="LOCAL-00001" summary="Add SDK.">
+      <option name="closed" value="true" />
+      <created>1688956664891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688956664891</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add SDK." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add SDK." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
