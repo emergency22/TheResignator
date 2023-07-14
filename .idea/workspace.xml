@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Save point.">
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Email validator fully functional.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/functionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/functionality.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/indexFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/indexFunctionality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static_assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,7 @@
       <workItem from="1689089832984" duration="1200000" />
       <workItem from="1689272164848" duration="1145000" />
       <workItem from="1689290750879" duration="10086000" />
-      <workItem from="1689349356400" duration="4139000" />
+      <workItem from="1689349356400" duration="5084000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -162,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689297836343</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Email validator fully functional.">
+      <option name="closed" value="true" />
+      <created>1689353549501</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689353549501</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +179,8 @@
     <MESSAGE value="Refactor directories. Spring Web not implemented but Axios is&quot;" />
     <MESSAGE value="Start to add email verification. Work in progress." />
     <MESSAGE value="Save point." />
-    <option name="LAST_COMMIT_MESSAGE" value="Save point." />
+    <MESSAGE value="Email validator fully functional." />
+    <option name="LAST_COMMIT_MESSAGE" value="Email validator fully functional." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

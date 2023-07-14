@@ -10,8 +10,6 @@ function parseCSV(csv) {
     return data;
 }
 
-
-
 function readCSV(file, domain) {
     return fetch(file)
         .then(response => response.text())
@@ -71,7 +69,6 @@ function displayForm() {
             <input type="submit" value="That's it. I quit!" class="btn btn-success"></form>
         </div>`;
 
-    // const submitButton = document.querySelector('.btn.btn-success');
     const theForm = document.getElementById('theForm');
     theForm.addEventListener('submit', checkEmail);
 }
