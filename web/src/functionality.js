@@ -81,7 +81,7 @@ function displayForm() {
         <input type="date" id="lastDay" name="lastDay" required><br><br>
 
         <div class="text-center">
-            <input type="submit" value="Submit" class="btn btn-success" onClick="confirmQuit(event)">
+            <input type="submit" value="Submit" class="btn btn-success" onClick="confirmQuit(event)"></form>
         </div>`;
 }
 
