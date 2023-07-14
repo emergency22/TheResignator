@@ -15,14 +15,10 @@ function readCSV(file, domain) {
         .then(response => response.text())
         .then(csvString => {
             const data = parseCSV(csvString);
-            // console.log("inside readCSV", domain);
 
             for (let i = 0; i < data.length; i++) {
-                // console.log("data original: ", data[i]);
-                // console.log("data changed: ", data[i][0])
                 if (domain === data[i][0]) {
 
-                    // console.log("Domain found!");
                     return Promise.resolve(false); // Reject the Promise if domain is found
                 }
             }
@@ -36,9 +32,7 @@ async function checkEmail(event) {
 
     const formData = new FormData(document.getElementById('theForm'));
     const emailFromTheForm = formData.get('email');
-    console.log("emailFromTheForm", emailFromTheForm);
 
-    // Check if any field is empty
     let isValid = true;
 
     if (emailFromTheForm.trim() === '') {
@@ -48,11 +42,9 @@ async function checkEmail(event) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         isValid = emailRegex.test(emailFromTheForm);
     }
-    console.log("isValid: ", isValid);
 
     if (isValid) {
         const domain = emailFromTheForm.split('@')[1];
-        console.log(domain);
 
         const isSuperValid = await readCSV('../static_assets/domains.csv', domain);
 
@@ -63,7 +55,6 @@ async function checkEmail(event) {
         }
     }
     else {
-        console.log("uh oh");
         alert("Please enter your company email address.");
     }
 }

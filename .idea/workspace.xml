@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Email validator fully functional.">
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="More email validation complete.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/indexFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/indexFunctionality.js" afterDir="false" />
     </list>
@@ -127,7 +127,7 @@
       <workItem from="1689272164848" duration="1145000" />
       <workItem from="1689290750879" duration="10086000" />
       <workItem from="1689349356400" duration="9102000" />
-      <workItem from="1689362440916" duration="755000" />
+      <workItem from="1689362440916" duration="1100000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -177,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689354470808</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="More email validation complete.">
+      <option name="closed" value="true" />
+      <created>1689363284543</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689363284543</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +197,8 @@
     <MESSAGE value="Start to add email verification. Work in progress." />
     <MESSAGE value="Save point." />
     <MESSAGE value="Email validator fully functional." />
-    <option name="LAST_COMMIT_MESSAGE" value="Email validator fully functional." />
+    <MESSAGE value="More email validation complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="More email validation complete." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
