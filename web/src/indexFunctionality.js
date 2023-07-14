@@ -15,18 +15,18 @@ function readCSV(file, domain) {
         .then(response => response.text())
         .then(csvString => {
             const data = parseCSV(csvString);
-            console.log("inside readCSV", domain);
+            // console.log("inside readCSV", domain);
 
             for (let i = 0; i < data.length; i++) {
-                console.log("data original: ", data[i]);
-                console.log("data changed: ", data[i][0])
+                // console.log("data original: ", data[i]);
+                // console.log("data changed: ", data[i][0])
                 if (domain === data[i][0]) {
 
-                    console.log("Domain found!");
+                    // console.log("Domain found!");
                     return Promise.resolve(false); // Reject the Promise if domain is found
                 }
             }
-            console.log("Domain NOT found!");
+            // console.log("Domain NOT found!");
             return Promise.resolve(true); // Resolve the Promise if domain is not found
         });
 }
@@ -36,12 +36,19 @@ async function checkEmail(event) {
 
     const formData = new FormData(document.getElementById('theForm'));
     const emailFromTheForm = formData.get('email');
+    console.log("emailFromTheForm", emailFromTheForm);
 
     // Check if any field is empty
     let isValid = true;
+
     if (emailFromTheForm.trim() === '') {
         isValid = false;
+    } else {
+        // Check if the email is in a valid format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        isValid = emailRegex.test(emailFromTheForm);
     }
+    console.log("isValid: ", isValid);
 
     if (isValid) {
         const domain = emailFromTheForm.split('@')[1];
@@ -54,7 +61,9 @@ async function checkEmail(event) {
         } else {
             alert("Please enter your company email address.\n\nNo personal email addresses.");
         }
-    } else {
+    }
+    else {
+        console.log("uh oh");
         alert("Please enter your company email address.");
     }
 }

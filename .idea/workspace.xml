@@ -126,7 +126,8 @@
       <workItem from="1689089832984" duration="1200000" />
       <workItem from="1689272164848" duration="1145000" />
       <workItem from="1689290750879" duration="10086000" />
-      <workItem from="1689349356400" duration="5084000" />
+      <workItem from="1689349356400" duration="9102000" />
+      <workItem from="1689362440916" duration="755000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -168,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689353549501</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Email validator fully functional.">
+      <option name="closed" value="true" />
+      <created>1689354470808</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689354470808</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
