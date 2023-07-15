@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Save point." />
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Save point.">
+      <change afterPath="$PROJECT_DIR$/ResignatorService/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,6 +150,7 @@
       <workItem from="1689362440916" duration="15073000" />
       <workItem from="1689443193973" duration="131000" />
       <workItem from="1689443333634" duration="208000" />
+      <workItem from="1689444842250" duration="2090000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
