@@ -1,6 +1,6 @@
-package com.murillo.alex.resignatorservice.Entity;
+package com.murillo.alex.resignatorservice.Lambda.Response;
 
-public class Email {
+public class EmailGenerationResponse {
     private final String recipientAddress;
     private final String recipientName;
     private final String position;
@@ -11,7 +11,7 @@ public class Email {
     private final String executionDate;
     private final String lastDay;
 
-    public Email(String recipientAddress, String recipientName, String position, String organization, String signature, String senderAddress, String senderPhone, String executionDate, String lastDay) {
+    public EmailGenerationResponse(String recipientAddress, String recipientName, String position, String organization, String signature, String senderAddress, String senderPhone, String executionDate, String lastDay) {
         this.recipientAddress = recipientAddress;
         this.recipientName = recipientName;
         this.position = position;

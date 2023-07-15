@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Built out EmailGenerationRequest class">
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Start to format template yaml file">
+      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailFinishingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailGenerationLambda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormatterService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailGeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailFormattingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/Requests/EmailGenerationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Entity/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/Response/EmailGenerationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static_assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static_assets/paidUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/paidUser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +154,7 @@
       <workItem from="1689362440916" duration="15073000" />
       <workItem from="1689443193973" duration="131000" />
       <workItem from="1689443333634" duration="208000" />
-      <workItem from="1689444842250" duration="2405000" />
+      <workItem from="1689444842250" duration="7117000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -245,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689446975684</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Start to format template yaml file">
+      <option name="closed" value="true" />
+      <created>1689447442541</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689447442541</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +276,8 @@
     <MESSAGE value="Axios and npm installed." />
     <MESSAGE value="Save point." />
     <MESSAGE value="Built out EmailGenerationRequest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built out EmailGenerationRequest class" />
+    <MESSAGE value="Start to format template yaml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start to format template yaml file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

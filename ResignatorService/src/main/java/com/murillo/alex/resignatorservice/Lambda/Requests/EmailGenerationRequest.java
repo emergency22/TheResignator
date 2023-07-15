@@ -1,4 +1,4 @@
-package com.murillo.alex.resignatorservice.Activity.Requests;
+package com.murillo.alex.resignatorservice.Lambda.Requests;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
