@@ -10,6 +10,8 @@ public class EmailFinishingService {
     private String body;
 
 
+    public EmailFinishingService() {}
+
     public EmailFinishingService(EmailGenerationResponse emailGenerationResponse) {
         this.recipientAddress = emailGenerationResponse.getRecipientAddress();
         this.subject = "Letter of Resignation";

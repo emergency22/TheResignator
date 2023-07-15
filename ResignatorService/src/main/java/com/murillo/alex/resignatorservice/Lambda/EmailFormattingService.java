@@ -1,7 +1,6 @@
 package com.murillo.alex.resignatorservice.Lambda;
 
 import com.murillo.alex.resignatorservice.Lambda.Requests.EmailGenerationRequest;
-import com.murillo.alex.resignatorservice.Lambda.Response.EmailGenerationResponse;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,6 +21,12 @@ public class EmailFormattingService {
     private SimpleDateFormat formattedExecutionDate;
     private String formattedLastDay;
 
+    private EmailFinishingService emailFinishingService;
+
+    public EmailFormattingService() {
+        this.emailFinishingService = new EmailFinishingService();
+    }
+
     public void formatData(EmailGenerationRequest emailGenerationRequest) {
         log.info("EmailFormattingService formatData method activated.");
 
@@ -35,6 +40,7 @@ public class EmailFormattingService {
         formattedExecutionDate = emailGenerationRequest.getExecutionDate();
         formattedLastDay = formatDate(emailGenerationRequest.getLastDay());
 
+        emailFinishingService.formatEmail()
     }
 
     private String formatName(String recipientName) {
