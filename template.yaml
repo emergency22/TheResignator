@@ -199,78 +199,78 @@ Resources:
                   - logs:PutLogEvents
                   - cloudwatch:PutMetricData
                 Resource: '*'
-        - PolicyName: 'AccessApparatusTable'
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action: dynamodb:*
-                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/apparatus"
-        - PolicyName: 'AccessCoefficientTable'
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action: dynamodb:*
-                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/coefficient"
-        - PolicyName: 'FireDeptAndAppTypeNumIndex'
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action: dynamodb:*
-                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/apparatus/index/*"
-        - PolicyName: 'AccessConstantsTable'
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action: dynamodb:*
-                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/constants"
+#        - PolicyName: 'AccessApparatusTable'
+#          PolicyDocument:
+#            Version: '2012-10-17'
+#            Statement:
+#              - Effect: Allow
+#                Action: dynamodb:*
+#                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/apparatus"
+#        - PolicyName: 'AccessCoefficientTable'
+#          PolicyDocument:
+#            Version: '2012-10-17'
+#            Statement:
+#              - Effect: Allow
+#                Action: dynamodb:*
+#                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/coefficient"
+#        - PolicyName: 'FireDeptAndAppTypeNumIndex'
+#          PolicyDocument:
+#            Version: '2012-10-17'
+#            Statement:
+#              - Effect: Allow
+#                Action: dynamodb:*
+#                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/apparatus/index/*"
+#        - PolicyName: 'AccessConstantsTable'
+#          PolicyDocument:
+#            Version: '2012-10-17'
+#            Statement:
+#              - Effect: Allow
+#                Action: dynamodb:*
+#                Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/constants"
 
   #-----------------------------------------------------
   # Lambda Functions Configuration
   #-----------------------------------------------------
 
-  GetApparatusLambda:
-    Type: AWS::Serverless::Function
-    Properties:
-      Role: !GetAtt AccessRole.Arn
-      CodeUri: FirefighterCheatsheetServiceLambda
-      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.GetApparatusLambda::handleRequest
-      Runtime: java11
-      Architectures:
-        - x86_64
-      MemorySize: 512
-      Environment:
-        Variables:
-          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
-      Events:
-        FirefighterCheatsheetService:
-          Type: Api
-          Properties:
-            Path: /apparatus
-            Method: get
-
-  DeleteApparatusLambda:
-    Type: AWS::Serverless::Function
-    Properties:
-      Role: !GetAtt AccessRole.Arn
-      CodeUri: FirefighterCheatsheetServiceLambda
-      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.DeleteApparatusLambda::handleRequest
-      Runtime: java11
-      Architectures:
-        - x86_64
-      MemorySize: 512
-      Environment:
-        Variables:
-          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
-      Events:
-        FirefighterCheatsheetService:
-          Type: Api
-          Properties:
-            Path: /apparatus/{apparatusTypeAndNumber}/
-            Method: delete
+#  GetApparatusLambda:
+#    Type: AWS::Serverless::Function
+#    Properties:
+#      Role: !GetAtt AccessRole.Arn
+#      CodeUri: FirefighterCheatsheetServiceLambda
+#      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.GetApparatusLambda::handleRequest
+#      Runtime: java11
+#      Architectures:
+#        - x86_64
+#      MemorySize: 512
+#      Environment:
+#        Variables:
+#          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+#      Events:
+#        FirefighterCheatsheetService:
+#          Type: Api
+#          Properties:
+#            Path: /apparatus
+#            Method: get
+#
+#  DeleteApparatusLambda:
+#    Type: AWS::Serverless::Function
+#    Properties:
+#      Role: !GetAtt AccessRole.Arn
+#      CodeUri: FirefighterCheatsheetServiceLambda
+#      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.DeleteApparatusLambda::handleRequest
+#      Runtime: java11
+#      Architectures:
+#        - x86_64
+#      MemorySize: 512
+#      Environment:
+#        Variables:
+#          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+#      Events:
+#        FirefighterCheatsheetService:
+#          Type: Api
+#          Properties:
+#            Path: /apparatus/{apparatusTypeAndNumber}/
+#            Method: delete
 
   AddApparatusLambda:
     Type: AWS::Serverless::Function
@@ -292,144 +292,144 @@ Resources:
             Path: /apparatus
             Method: post
 
-  GetIndividualApparatusLambda:
-    Type: AWS::Serverless::Function
-    Properties:
-      Role: !GetAtt AccessRole.Arn
-      CodeUri: FirefighterCheatsheetServiceLambda
-      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.GetIndividualApparatusLambda::handleRequest
-      Runtime: java11
-      Architectures:
-        - x86_64
-      MemorySize: 512
-      Environment:
-        Variables:
-          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
-      Events:
-        FirefighterCheatsheetService:
-          Type: Api
-          Properties:
-            Path: /apparatus/individual
-            Method: get
-
-  DeleteHoseLambda:
-    Type: AWS::Serverless::Function
-    Properties:
-      Role: !GetAtt AccessRole.Arn
-      CodeUri: FirefighterCheatsheetServiceLambda
-      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.DeleteHoseLambda::handleRequest
-      Runtime: java11
-      Architectures:
-        - x86_64
-      MemorySize: 512
-      Environment:
-        Variables:
-          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
-      Events:
-        FirefighterCheatsheetService:
-          Type: Api
-          Properties:
-            Path: /apparatus/hose
-            Method: delete
-
-  AddHoseLambda:
-    Type: AWS::Serverless::Function
-    Properties:
-      Role: !GetAtt AccessRole.Arn
-      CodeUri: FirefighterCheatsheetServiceLambda
-      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.AddHoseLambda::handleRequest
-      Runtime: java11
-      Architectures:
-        - x86_64
-      MemorySize: 512
-      Environment:
-        Variables:
-          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
-      Events:
-        FirefighterCheatsheetService:
-          Type: Api
-          Properties:
-            Path: /apparatus/hose
-            Method: put
-
-  GetConstantsLambda:
-    Type: AWS::Serverless::Function
-    Properties:
-      Role: !GetAtt AccessRole.Arn
-      CodeUri: FirefighterCheatsheetServiceLambda
-      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.GetConstantsLambda::handleRequest
-      Runtime: java11
-      Architectures:
-        - x86_64
-      MemorySize: 512
-      Environment:
-        Variables:
-          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
-      Events:
-        FirefighterCheatsheetService:
-          Type: Api
-          Properties:
-            Path: /constants
-            Method: get
+#  GetIndividualApparatusLambda:
+#    Type: AWS::Serverless::Function
+#    Properties:
+#      Role: !GetAtt AccessRole.Arn
+#      CodeUri: FirefighterCheatsheetServiceLambda
+#      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.GetIndividualApparatusLambda::handleRequest
+#      Runtime: java11
+#      Architectures:
+#        - x86_64
+#      MemorySize: 512
+#      Environment:
+#        Variables:
+#          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+#      Events:
+#        FirefighterCheatsheetService:
+#          Type: Api
+#          Properties:
+#            Path: /apparatus/individual
+#            Method: get
+#
+#  DeleteHoseLambda:
+#    Type: AWS::Serverless::Function
+#    Properties:
+#      Role: !GetAtt AccessRole.Arn
+#      CodeUri: FirefighterCheatsheetServiceLambda
+#      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.DeleteHoseLambda::handleRequest
+#      Runtime: java11
+#      Architectures:
+#        - x86_64
+#      MemorySize: 512
+#      Environment:
+#        Variables:
+#          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+#      Events:
+#        FirefighterCheatsheetService:
+#          Type: Api
+#          Properties:
+#            Path: /apparatus/hose
+#            Method: delete
+#
+#  AddHoseLambda:
+#    Type: AWS::Serverless::Function
+#    Properties:
+#      Role: !GetAtt AccessRole.Arn
+#      CodeUri: FirefighterCheatsheetServiceLambda
+#      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.AddHoseLambda::handleRequest
+#      Runtime: java11
+#      Architectures:
+#        - x86_64
+#      MemorySize: 512
+#      Environment:
+#        Variables:
+#          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+#      Events:
+#        FirefighterCheatsheetService:
+#          Type: Api
+#          Properties:
+#            Path: /apparatus/hose
+#            Method: put
+#
+#  GetConstantsLambda:
+#    Type: AWS::Serverless::Function
+#    Properties:
+#      Role: !GetAtt AccessRole.Arn
+#      CodeUri: FirefighterCheatsheetServiceLambda
+#      Handler: com.nashss.se.firefightercheatsheetservice.Lambda.GetConstantsLambda::handleRequest
+#      Runtime: java11
+#      Architectures:
+#        - x86_64
+#      MemorySize: 512
+#      Environment:
+#        Variables:
+#          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+#      Events:
+#        FirefighterCheatsheetService:
+#          Type: Api
+#          Properties:
+#            Path: /constants
+#            Method: get
 
   #-----------------------------------------------------
   # DynamoDB Configuration
   #-----------------------------------------------------
 
-  ApparatusTable:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      AttributeDefinitions:
-        - AttributeName: "userName"
-          AttributeType: "S"
-        - AttributeName: "fireDept"
-          AttributeType: "S"
-        - AttributeName: "apparatusTypeAndNumber"
-          AttributeType: "S"
-      KeySchema:
-        - AttributeName: "userName"
-          KeyType: "HASH"
-        - AttributeName: "apparatusTypeAndNumber"
-          KeyType: "RANGE"
-      BillingMode: "PAY_PER_REQUEST"
-      TableName: "apparatus"
-      GlobalSecondaryIndexes:
-        - IndexName: "FireDeptAndAppTypeNumIndex"
-          KeySchema:
-            - AttributeName: "fireDept"
-              KeyType: "HASH"
-            - AttributeName: "apparatusTypeAndNumber"
-              KeyType: "RANGE"
-          Projection:
-            ProjectionType: "ALL"
-
-  CoefficientTable:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      AttributeDefinitions:
-        - AttributeName: "hoseDiameter"
-          AttributeType: "N"
-      KeySchema:
-        - AttributeName: "hoseDiameter"
-          KeyType: "HASH"
-      BillingMode: "PAY_PER_REQUEST"
-      TableName: "coefficient"
-
-  ConstantsTable:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      AttributeDefinitions:
-        - AttributeName: "key"
-          AttributeType: "S"
-        - AttributeName: "humanValue"
-          AttributeType: "S"
-      KeySchema:
-        - AttributeName: "key"
-          KeyType: "HASH"
-        - AttributeName: "humanValue"
-          KeyType: "RANGE"
-      BillingMode: "PAY_PER_REQUEST"
-      TableName: "constants"
+#  ApparatusTable:
+#    Type: AWS::DynamoDB::Table
+#    Properties:
+#      AttributeDefinitions:
+#        - AttributeName: "userName"
+#          AttributeType: "S"
+#        - AttributeName: "fireDept"
+#          AttributeType: "S"
+#        - AttributeName: "apparatusTypeAndNumber"
+#          AttributeType: "S"
+#      KeySchema:
+#        - AttributeName: "userName"
+#          KeyType: "HASH"
+#        - AttributeName: "apparatusTypeAndNumber"
+#          KeyType: "RANGE"
+#      BillingMode: "PAY_PER_REQUEST"
+#      TableName: "apparatus"
+#      GlobalSecondaryIndexes:
+#        - IndexName: "FireDeptAndAppTypeNumIndex"
+#          KeySchema:
+#            - AttributeName: "fireDept"
+#              KeyType: "HASH"
+#            - AttributeName: "apparatusTypeAndNumber"
+#              KeyType: "RANGE"
+#          Projection:
+#            ProjectionType: "ALL"
+#
+#  CoefficientTable:
+#    Type: AWS::DynamoDB::Table
+#    Properties:
+#      AttributeDefinitions:
+#        - AttributeName: "hoseDiameter"
+#          AttributeType: "N"
+#      KeySchema:
+#        - AttributeName: "hoseDiameter"
+#          KeyType: "HASH"
+#      BillingMode: "PAY_PER_REQUEST"
+#      TableName: "coefficient"
+#
+#  ConstantsTable:
+#    Type: AWS::DynamoDB::Table
+#    Properties:
+#      AttributeDefinitions:
+#        - AttributeName: "key"
+#          AttributeType: "S"
+#        - AttributeName: "humanValue"
+#          AttributeType: "S"
+#      KeySchema:
+#        - AttributeName: "key"
+#          KeyType: "HASH"
+#        - AttributeName: "humanValue"
+#          KeyType: "RANGE"
+#      BillingMode: "PAY_PER_REQUEST"
+#      TableName: "constants"
 
 #-----------------------------------------------------
 # The outputs defined below will be printed
@@ -438,27 +438,27 @@ Resources:
 
 Outputs:
 
-  CognitoUserPoolId:
-    Value: !Ref UserPool
-    Description: "The Cognito User Pool ID (COGNITO_USER_POOL_ID)."
-  CognitoUserPoolClientId:
-    Value: !Ref UserPoolClient
-    Description: "The Cognito User Pool Client ID (COGNITO_USER_POOL_CLIENT_ID)."
-  CognitoDomain:
-    Value: !Sub "${CognitoDomain}.auth.us-east-2.amazoncognito.com"
-    Description: "The Cognito Domain (COGNITO_DOMAIN)."
+#  CognitoUserPoolId:
+#    Value: !Ref UserPool
+#    Description: "The Cognito User Pool ID (COGNITO_USER_POOL_ID)."
+#  CognitoUserPoolClientId:
+#    Value: !Ref UserPoolClient
+#    Description: "The Cognito User Pool Client ID (COGNITO_USER_POOL_CLIENT_ID)."
+#  CognitoDomain:
+#    Value: !Sub "${CognitoDomain}.auth.us-east-2.amazoncognito.com"
+#    Description: "The Cognito Domain (COGNITO_DOMAIN)."
 
   ApiBaseUrl:
     Description: "API Gateway endpoint base URL for Prod stage (API_BASE_URL)."
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
 
-  CognitoRedirectSignin:
-    Description: "The URL of the deployed front-end application (COGNITO_REDIRECT_SIGNIN)."
-    Value: !Sub "https://${CloudfrontDistribution.DomainName}"
-    Condition: DeployCloudFront
-  CognitoRedirectSignout:
-    Description: "The URL of the deployed front-end application (COGNITO_REDIRECT_SIGNOUT)."
-    Value: !Sub "https://${CloudfrontDistribution.DomainName}"
-    Condition: DeployCloudFront
+#  CognitoRedirectSignin:
+#    Description: "The URL of the deployed front-end application (COGNITO_REDIRECT_SIGNIN)."
+#    Value: !Sub "https://${CloudfrontDistribution.DomainName}"
+#    Condition: DeployCloudFront
+#  CognitoRedirectSignout:
+#    Description: "The URL of the deployed front-end application (COGNITO_REDIRECT_SIGNOUT)."
+#    Value: !Sub "https://${CloudfrontDistribution.DomainName}"
+#    Condition: DeployCloudFront
 
 
