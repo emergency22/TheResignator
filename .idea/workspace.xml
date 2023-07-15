@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Email validator fully functional.">
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Save point.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/indexFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/indexFunctionality.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,16 +61,18 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2R6dbvkz0o2RPYuwb66pDFHdRlu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
@@ -97,9 +98,24 @@
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\web\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\gradle" />
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\web\static_assets" />
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\ResignatorService" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="TheResignator.main" />
+      <option name="filePath" value="$PROJECT_DIR$/ResignatorService/build.gradle.kts" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -126,7 +142,10 @@
       <workItem from="1689089832984" duration="1200000" />
       <workItem from="1689272164848" duration="1145000" />
       <workItem from="1689290750879" duration="10086000" />
-      <workItem from="1689349356400" duration="5084000" />
+      <workItem from="1689349356400" duration="9102000" />
+      <workItem from="1689362440916" duration="15073000" />
+      <workItem from="1689443193973" duration="131000" />
+      <workItem from="1689443333634" duration="166000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -168,19 +187,62 @@
       <option name="project" value="LOCAL" />
       <updated>1689353549501</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Email validator fully functional.">
+      <option name="closed" value="true" />
+      <created>1689354470808</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689354470808</updated>
+    </task>
+    <task id="LOCAL-00007" summary="More email validation complete.">
+      <option name="closed" value="true" />
+      <created>1689363284543</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689363284543</updated>
+    </task>
+    <task id="LOCAL-00008" summary="More email validation complete.">
+      <option name="closed" value="true" />
+      <created>1689363552363</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689363552363</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Axios and npm installed.">
+      <option name="closed" value="true" />
+      <created>1689438149121</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689438149121</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Save point.">
+      <option name="closed" value="true" />
+      <created>1689443172400</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689443172400</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add SDK." />
     <MESSAGE value="Refactor directories. Spring Web not implemented but Axios is&quot;" />
     <MESSAGE value="Start to add email verification. Work in progress." />
-    <MESSAGE value="Save point." />
     <MESSAGE value="Email validator fully functional." />
-    <option name="LAST_COMMIT_MESSAGE" value="Email validator fully functional." />
+    <MESSAGE value="More email validation complete." />
+    <MESSAGE value="Axios and npm installed." />
+    <MESSAGE value="Save point." />
+    <option name="LAST_COMMIT_MESSAGE" value="Save point." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

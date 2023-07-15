@@ -4,9 +4,6 @@ const quitClient = new QuitClient();
     async function confirmQuit(event) {
         event.preventDefault(); // Prevents the default form submission
 
-        // const quitJob = "Quit my job";
-        // const cancel = "Cancel";
-
         const submissionData = document.getElementById('theForm');
         const formData = new FormData(submissionData);
 
@@ -26,7 +23,7 @@ const quitClient = new QuitClient();
 
             if (confirmation) {
                 // User clicked "OK" or "Yes"
-                // Perform the action to quit the job
+                const senderEmail = sessionStorage.getItem("validatedEmail");
                 const firstName = formData.get('firstName');
                 const lastName = formData.get('lastName');
                 const position = formData.get('position');
@@ -36,7 +33,7 @@ const quitClient = new QuitClient();
                 const executionDate = formData.get('executionDate');
                 const lastDay = formData.get('lastDay');
 
-                quitClient.quitThisJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
+                quitClient.quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
 
                 document.getElementById('ready').innerHTML = "";
                 document.getElementById('theFormArea').innerHTML = "";
@@ -45,7 +42,6 @@ const quitClient = new QuitClient();
                 console.log("Quitting job...");
             } else {
                 // User clicked "Cancel" or "No"
-                // Do nothing or perform any other desired action
                 document.getElementById('ready').innerHTML = "";
                 document.getElementById('disclaimer').innerHTML = "";
                 document.getElementById('theFormArea').innerHTML = "";
@@ -81,7 +77,7 @@ function displayForm() {
         <input type="date" id="lastDay" name="lastDay" required><br><br>
 
         <div class="text-center">
-            <input type="submit" value="Submit" class="btn btn-success" onClick="confirmQuit(event)"></form>
+            <input type="submit" value="Submit" class="btn btn-success"></form>
         </div>`;
 }
 

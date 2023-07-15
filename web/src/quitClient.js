@@ -1,28 +1,35 @@
-// import axios from 'axios';
 export class QuitClient {
-    quitThisJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
-        console.log("QUITTTT!!!");
-        console.log("firstName is: " + firstName);
+    quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
+        console.log("inside QuitThisJob")
+        const data = {
+            senderEmail: senderEmail,
+            firstName: firstName,
+            lastName: lastName,
+            position: position,
+            organization: organization,
+            recipientFirstName: recipientFirstName,
+            recipientEmail: recipientEmail,
+            executionDate: executionDate,
+            lastDay: lastDay
+        };
 
-        //take in the data from the form and pass it to the backend for processing via a POST request utilizing axios
-        //include said data in the body
-        // axios.post('http://localhost:8080/quit', {firstName: firstName, lastName: lastName, position: position, organization: organization, recipientFirstName: recipientFirstName, recipientEmail: recipientEmail, executionDate: executionDate, lastDay: lastDay});
+        const jsonString = JSON.stringify(data);
+        console.log(jsonString);
 
-        //On the backend, perhaps utilize Spring Boot @RequestBody to automatically map the request body data to a Java object
-        //stretch: include and incorporate a response from the backend
-
-        // axios.post(url, data, config)
+        // axios.post('http://localhost:8080/quit', jsonString)
         //     .then(response => {
         //         // Handle success
-        //         console.log(response.data);
+        //         console.log("success", response.data);
         //     })
         //     .catch(error => {
         //         // Handle error
         //         console.error(error);
         //     });
 
+        // axios.post('endpointGoesHere', jsonString)
+        //     .then((result) => console.log(result))
+        //     .catch((error) => console.log(error))
 
 
-        return null;
     }
 }
