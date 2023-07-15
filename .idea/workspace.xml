@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="More email validation complete.">
-      <change afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Axios and npm installed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/web/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/functionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/paidUserFunctionality.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/indexFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/indexFunctionality.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/quitClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/quitClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static_assets/paidUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/paidUser.html" afterDir="false" />
     </list>
@@ -109,6 +109,20 @@
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\ResignatorService" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="TheResignator.main" />
+      <option name="filePath" value="$PROJECT_DIR$/ResignatorService/build.gradle.kts" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -135,7 +149,7 @@
       <workItem from="1689272164848" duration="1145000" />
       <workItem from="1689290750879" duration="10086000" />
       <workItem from="1689349356400" duration="9102000" />
-      <workItem from="1689362440916" duration="10202000" />
+      <workItem from="1689362440916" duration="15049000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -201,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689363552363</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Axios and npm installed.">
+      <option name="closed" value="true" />
+      <created>1689438149121</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689438149121</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +237,8 @@
     <MESSAGE value="Save point." />
     <MESSAGE value="Email validator fully functional." />
     <MESSAGE value="More email validation complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="More email validation complete." />
+    <MESSAGE value="Axios and npm installed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Axios and npm installed." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

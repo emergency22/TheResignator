@@ -1,7 +1,8 @@
 export class QuitClient {
-    quitThisJob(firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
-
+    quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
+        console.log("inside QuitThisJob")
         const data = {
+            senderEmail: senderEmail,
             firstName: firstName,
             lastName: lastName,
             position: position,
@@ -25,9 +26,9 @@ export class QuitClient {
         //         console.error(error);
         //     });
 
-        axios.post('endpointGoesHere', jsonString)
-            .then((result) => console.log(result))
-            .catch((error) => console.log(error))
+        // axios.post('endpointGoesHere', jsonString)
+        //     .then((result) => console.log(result))
+        //     .catch((error) => console.log(error))
 
 
     }

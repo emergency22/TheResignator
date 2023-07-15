@@ -22,7 +22,6 @@ function readCSV(file, domain) {
                     return Promise.resolve(false); // Reject the Promise if domain is found
                 }
             }
-            // console.log("Domain NOT found!");
             return Promise.resolve(true); // Resolve the Promise if domain is not found
         });
 }
@@ -49,6 +48,8 @@ async function checkEmail(event) {
         const isSuperValid = await readCSV('../static_assets/domains.csv', domain);
 
         if (isSuperValid) {
+            const validatedEmail = emailFromTheForm.trim();
+            await sessionStorage.setItem("validatedEmail", validatedEmail);
             window.location.assign("../static_assets/paidUser.html");
         } else {
             alert("Please enter your company email address.\n\nNo personal email addresses.");
