@@ -1,55 +1,70 @@
 package com.murillo.alex.resignatorservice.Lambda;
 
-import com.murillo.alex.resignatorservice.Lambda.Response.EmailGenerationResponse;
+import com.murillo.alex.resignatorservice.Lambda.Entity.EmailData;
+
+import java.text.SimpleDateFormat;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EmailFinishingService {
+    private final String senderEmail;
+    private final String firstName;
+    private final String lastName;
+    private final String position;
+    private final String organization;
+    private final String recipientFirstName;
+    private final String recipientEmail;
+    private final SimpleDateFormat executionDate;
+    private final String lastDay;
+    private final Logger log = LogManager.getLogger();
 
-    private final String recipientAddress;
-    private String subject;
-    private final String executionDate;
-    private String body;
 
-
-    public EmailFinishingService() {}
-
-    public EmailFinishingService(EmailGenerationResponse emailGenerationResponse) {
-        this.recipientAddress = emailGenerationResponse.getRecipientAddress();
-        this.subject = "Letter of Resignation";
-        this.executionDate = emailGenerationResponse.getExecutionDate();
-        this.body = formatEmail(emailGenerationResponse);
+    public EmailFinishingService(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, SimpleDateFormat executionDate, String lastDay) {
+        this.senderEmail = senderEmail;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.position = position;
+        this.organization = organization;
+        this.recipientFirstName = recipientFirstName;
+        this.recipientEmail = recipientEmail;
+        this.executionDate = executionDate;
+        this.lastDay = lastDay;
     }
 
-    private String formatEmail(EmailGenerationResponse emailGenerationResponse) {
+    public EmailData formatEmail() {
+        log.info("EmailFinishingService formatEmail method activated.");
 
-        StringBuilder emailContent = new StringBuilder();
+        String subject = "Formal Letter of Resignation";
 
-        emailContent.append("Formal Letter of Resignation").append("\n\n\n");
-        emailContent.append(emailGenerationResponse.getExecutionDate()).append("\n\n");
-        emailContent.append("Dear ").append(emailGenerationResponse.getRecipientName()).append("\n\n");
-        emailContent.append("Please accept this letter as my formal resignation from my position as ")
-                .append(emailGenerationResponse.getPosition())
+        StringBuilder body = new StringBuilder();
+
+        body.append("Formal Letter of Resignation").append("\n\n\n");
+        body.append(this.executionDate.toString()).append("\n\n");
+        body.append("Dear ").append(this.recipientFirstName).append("\n\n");
+        body.append("Please accept this letter as my formal resignation from my position as ")
+                .append(this.position)
                 .append(" at ")
-                .append(emailGenerationResponse.getOrganization())
+                .append(this.organization)
                 .append(". My last day will be on ")
-                .append(emailGenerationResponse.getLastDay())
+                .append(this.lastDay)
                 .append("\n\n");
-        emailContent.append("I appreciate the opportunities for growth and development you have provided during my time at ")
-                .append(emailGenerationResponse.getOrganization())
+        body.append("I appreciate the opportunities for growth and development you have provided during my time at ")
+                .append(this.organization)
                 .append(". Thank you for your guidance and support.")
                 .append("\n\n");
-        emailContent.append("Please let me know if I can be of any help during the transition period. I wish you and ")
-                .append(emailGenerationResponse.getOrganization())
+        body.append("Please let me know if I can be of any help during the transition period. I wish you and ")
+                .append(this.organization)
                 .append(" all the best.")
                 .append("\n\n\n");
-        emailContent.append("Sincerely, ")
-                .append(emailGenerationResponse.getSignature()).append("\n")
-                .append(emailGenerationResponse.getSenderAddress()).append("\n")
-                .append(emailGenerationResponse.getSenderPhone());
+        body.append("Sincerely, ")
+                .append(this.firstName).append(" ").append(this.lastName).append("\n")
+                .append(this.senderEmail).append("\n");
 
         //for testing
-        System.out.println(emailContent.toString());
+        System.out.println(body);
 
-        return emailContent.toString();
+        return new EmailData(this.recipientEmail, subject, this.executionDate, body.toString());
     }
 
 }
