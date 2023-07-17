@@ -33,22 +33,28 @@ public class EmailGenerationLambda implements RequestHandler<EmailGenerationRequ
 
     private void scheduleEmailSending(EmailData emailData) {
         try {
+            // Create a Quartz job detail
             JobDetail jobDetail = JobBuilder.newJob(EmailSendingJob.class)
                     .withIdentity("emailJob", "group1")
                     .build();
 
+            // Set the emailData as a job data map so that it can be accessed in the job's execute method
             jobDetail.getJobDataMap().put("emailData", emailData);
 
+            // Create a Quartz trigger that fires once at the specified executionDate
             Trigger trigger = TriggerBuilder.newTrigger()
                     .withIdentity("emailTrigger", "group1")
                     .startAt(emailData.getExecutionDate())
                     .build();
 
+            // Schedule the job with the Quartz Scheduler
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
             scheduler.scheduleJob(jobDetail, trigger);
 
+            // Start the Quartz Scheduler
             scheduler.start();
         } catch (SchedulerException e) {
+            // Handle any exceptions that might occur during the scheduling process
             e.printStackTrace();
         }
 
