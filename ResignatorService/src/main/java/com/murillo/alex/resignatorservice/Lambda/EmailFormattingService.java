@@ -5,7 +5,7 @@ import com.murillo.alex.resignatorservice.Lambda.Requests.EmailGenerationRequest
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.murillo.alex.resignatorservice.Lambda.Response.EmailGenerationResponse;
+import com.murillo.alex.resignatorservice.Lambda.Entity.EmailData;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,14 +27,14 @@ public class EmailFormattingService {
     public EmailFormattingService() {
     }
 
-    public EmailGenerationResponse formatData(EmailGenerationRequest emailGenerationRequest) {
+    public EmailData formatData(EmailGenerationRequest emailGenerationRequest) {
         log.info("EmailFormattingService formatData method activated.");
 
         formattedSenderEmail = emailGenerationRequest.getSenderEmail();
         formattedFirstName = formatName(emailGenerationRequest.getFirstName());
         formattedLastName = formatName(emailGenerationRequest.getLastName());
         formattedPosition = formatName(emailGenerationRequest.getPosition());
-        formattedOrganization = formatName(emailGenerationRequest.getOrganization();
+        formattedOrganization = formatName(emailGenerationRequest.getOrganization());
         formattedRecipientFirstName = formatName(emailGenerationRequest.getRecipientFirstName());
         formattedRecipientEmail = emailGenerationRequest.getRecipientEmail();
         formattedExecutionDate = emailGenerationRequest.getExecutionDate();
