@@ -21,8 +21,6 @@ public class EmailGenerationLambda implements RequestHandler<EmailGenerationRequ
     public EmailGenerationResponse handleRequest(EmailGenerationRequest emailGenerationRequest, Context context) {
         log.info("EmailGenerationLambda handleRequest method activated.");
 
-        emailFormattingService.formatData(emailGenerationRequest);
-
-        return new EmailGenerationResponse();
+        return emailFormattingService.formatData(emailGenerationRequest);
     }
 }
