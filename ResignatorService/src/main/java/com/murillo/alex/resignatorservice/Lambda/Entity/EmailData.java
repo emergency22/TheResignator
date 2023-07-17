@@ -11,10 +11,10 @@ public class EmailData {
     private final Date executionDate;
     private final String body;
 
-    public EmailData(String recipientAddress, String subject, String executionDateString, String body) {
+    public EmailData(String recipientAddress, String subject, SimpleDateFormat executionDateString, String body) {
         this.recipientAddress = recipientAddress;
         this.subject = subject;
-        this.executionDate = parseExecutionDate(executionDateString);
+        this.executionDate = parseExecutionDate(String.valueOf(executionDateString));
         this.body = body;
     }
 
@@ -29,6 +29,18 @@ public class EmailData {
     }
 
     public Date getExecutionDate() {
-        return executionDate;
+        return this.executionDate;
+    }
+
+    public String getRecipientAddress() {
+        return this.recipientAddress;
+    }
+
+    public String getSubject() {
+        return this.subject;
+    }
+
+    public String getBody() {
+        return this.body;
     }
 }
