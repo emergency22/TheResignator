@@ -17,6 +17,12 @@ Resources:
           Properties:
             Path: /resignator
             Method: POST
+            # CORS Configuration START
+            Cors:
+              AllowMethods: "'POST'"
+              AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+              AllowOrigin: "'http://localhost:63342'"
+            # CORS Configuration END
 
 Outputs:
   ApiEndpoint:

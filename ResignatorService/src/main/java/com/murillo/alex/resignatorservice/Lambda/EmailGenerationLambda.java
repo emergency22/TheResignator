@@ -22,10 +22,12 @@ public class EmailGenerationLambda implements RequestHandler<EmailGenerationRequ
     @Override
     public EmailData handleRequest(EmailGenerationRequest emailGenerationRequest, Context context) {
         log.info("EmailGenerationLambda handleRequest method activated.");
+        log.info("Sender Email: {}", emailGenerationRequest.getSenderEmail());
+        log.info("First Name: {}", emailGenerationRequest.getFirstName());
 
         EmailData emailData = emailFormattingService.formatData(emailGenerationRequest);
 
-        scheduleEmailSending(emailData);
+//        scheduleEmailSending(emailData);
 
         return emailData;
 
