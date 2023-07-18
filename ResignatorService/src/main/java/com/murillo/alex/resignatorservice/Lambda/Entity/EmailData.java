@@ -11,7 +11,7 @@ public class EmailData {
     private final Date executionDate;
     private final String body;
 
-    public EmailData(String recipientAddress, String subject, SimpleDateFormat executionDateString, String body) {
+    public EmailData(String recipientAddress, String subject, Date executionDateString, String body) {
         this.recipientAddress = recipientAddress;
         this.subject = subject;
         this.executionDate = parseExecutionDate(String.valueOf(executionDateString));

@@ -26,9 +26,9 @@ export class QuitClient {
         //         console.error(error);
         //     });
 
-        // axios.post('http://localhost:8080/resignator', jsonString)
-        //     .then((result) => console.log(result))
-        //     .catch((error) => console.log(error))
+        axios.post('http://localhost:3000/resignator', jsonString)
+            .then((result) => console.log(result))
+            .catch((error) => console.log(error))
 
 
     }
