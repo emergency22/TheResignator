@@ -1,5 +1,7 @@
 package com.murillo.alex.resignatorservice.Lambda.Requests;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
@@ -14,10 +16,23 @@ public class EmailGenerationRequest {
     private final String organization;
     private final String recipientFirstName;
     private final String recipientEmail;
-    private final SimpleDateFormat executionDate;
-    private final SimpleDateFormat lastDay;
+    private final String executionDate;
+    private final String lastDay;
 
-    public EmailGenerationRequest(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, SimpleDateFormat executionDate, SimpleDateFormat lastDay) {
+    // Default constructor for Jackson deserialization
+    public EmailGenerationRequest() {
+        this.senderEmail = null;
+        this.firstName = null;
+        this.lastName = null;
+        this.position = null;
+        this.organization = null;
+        this.recipientFirstName = null;
+        this.recipientEmail = null;
+        this.executionDate = null;
+        this.lastDay = null;
+    }
+
+    private EmailGenerationRequest(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, String executionDate, String lastDay) {
         this.senderEmail = senderEmail;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -57,11 +72,11 @@ public class EmailGenerationRequest {
         return recipientEmail;
     }
 
-    public SimpleDateFormat getExecutionDate() {
+    public String getExecutionDate() {
         return executionDate;
     }
 
-    public SimpleDateFormat getLastDay() {
+    public String getLastDay() {
         return lastDay;
     }
 
@@ -80,6 +95,22 @@ public class EmailGenerationRequest {
                 '}';
     }
 
+    // Factory method with JsonCreator annotation
+    @JsonCreator
+    public static EmailGenerationRequest create(@JsonProperty("senderEmail") String senderEmail,
+                                                @JsonProperty("firstName") String firstName,
+                                                @JsonProperty("lastName") String lastName,
+                                                @JsonProperty("position") String position,
+                                                @JsonProperty("organization") String organization,
+                                                @JsonProperty("recipientFirstName") String recipientFirstName,
+                                                @JsonProperty("recipientEmail") String recipientEmail,
+                                                @JsonProperty("executionDate") String executionDate,
+                                                @JsonProperty("lastDay") String lastDay) {
+        return new EmailGenerationRequest(senderEmail, firstName, lastName, position, organization,
+                recipientFirstName, recipientEmail, executionDate, lastDay);
+    }
+
+
     public static Builder builder() {
         return new Builder();
     }
@@ -93,8 +124,8 @@ public class EmailGenerationRequest {
         private String organization;
         private String recipientFirstName;
         private String recipientEmail;
-        private SimpleDateFormat executionDate;
-        private SimpleDateFormat lastDay;
+        private String executionDate;
+        private String lastDay;
 
         public Builder withSenderEmail(String senderEmail) {
             this.senderEmail = senderEmail;
@@ -131,12 +162,12 @@ public class EmailGenerationRequest {
             return this;
         }
 
-        public Builder withExecutionDate(SimpleDateFormat executionDate) {
+        public Builder withExecutionDate(String executionDate) {
             this.executionDate = executionDate;
             return this;
         }
 
-        public Builder withLastDay(SimpleDateFormat lastDay) {
+        public Builder withLastDay(String lastDay) {
             this.lastDay = lastDay;
             return this;
         }

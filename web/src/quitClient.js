@@ -1,6 +1,6 @@
 export class QuitClient {
     quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
-        console.log("inside QuitThisJob")
+        console.log("inside QuitThisJob");
         const data = {
             senderEmail: senderEmail,
             firstName: firstName,
@@ -13,23 +13,11 @@ export class QuitClient {
             lastDay: lastDay
         };
 
-        const jsonString = JSON.stringify(data);
-        console.log(jsonString);
+        console.log(data);
 
-        // axios.post('http://localhost:8080/quit', jsonString)
-        //     .then(response => {
-        //         // Handle success
-        //         console.log("success", response.data);
-        //     })
-        //     .catch(error => {
-        //         // Handle error
-        //         console.error(error);
-        //     });
-
-        // axios.post('endpointGoesHere', jsonString)
-        //     .then((result) => console.log(result))
-        //     .catch((error) => console.log(error))
-
-
+        axios.post('http://localhost:3000/resignator', data)
+            .then((result) => console.log(result))
+            .catch((error) => console.log(error));
     }
+
 }

@@ -2,6 +2,7 @@ package com.murillo.alex.resignatorservice.Lambda;
 
 import com.murillo.alex.resignatorservice.Lambda.Requests.EmailGenerationRequest;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -19,8 +20,8 @@ public class EmailFormattingService {
     private String formattedOrganization;
     private String formattedRecipientFirstName;
     private String formattedRecipientEmail;
-    private SimpleDateFormat formattedExecutionDate;
-    private String formattedLastDay;
+    private Date formattedExecutionDate;
+    private Date formattedLastDay;
 
     private EmailFinishingService emailFinishingService;
 
@@ -37,8 +38,8 @@ public class EmailFormattingService {
         formattedOrganization = formatName(emailGenerationRequest.getOrganization());
         formattedRecipientFirstName = formatName(emailGenerationRequest.getRecipientFirstName());
         formattedRecipientEmail = emailGenerationRequest.getRecipientEmail();
-        formattedExecutionDate = emailGenerationRequest.getExecutionDate();
-        formattedLastDay = formatDate(emailGenerationRequest.getLastDay());
+        formattedExecutionDate = parseDateFromString(emailGenerationRequest.getExecutionDate());
+        formattedLastDay = parseDateFromString(emailGenerationRequest.getLastDay());
 
         this.emailFinishingService = new EmailFinishingService(formattedSenderEmail, formattedFirstName, formattedLastName, formattedPosition, formattedOrganization, formattedRecipientFirstName, formattedRecipientEmail, formattedExecutionDate, formattedLastDay);
         return emailFinishingService.formatEmail();
@@ -63,6 +64,17 @@ public class EmailFormattingService {
         String formattedDate = formatter.format(date);
         return formattedDate;
     }
+
+    private Date parseDateFromString(String dateString) {
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+            return dateFormat.parse(dateString);
+        } catch (ParseException e) {
+            log.error("Error parsing date from string: {}", dateString, e);
+            return null;
+        }
+    }
+
 
 
 }

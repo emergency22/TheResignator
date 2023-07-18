@@ -3,6 +3,7 @@ package com.murillo.alex.resignatorservice.Lambda;
 import com.murillo.alex.resignatorservice.Lambda.Entity.EmailData;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,12 +16,12 @@ public class EmailFinishingService {
     private final String organization;
     private final String recipientFirstName;
     private final String recipientEmail;
-    private final SimpleDateFormat executionDate;
-    private final String lastDay;
+    private final Date executionDate;
+    private final Date lastDay;
     private final Logger log = LogManager.getLogger();
 
 
-    public EmailFinishingService(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, SimpleDateFormat executionDate, String lastDay) {
+    public EmailFinishingService(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, Date executionDate, Date lastDay) {
         this.senderEmail = senderEmail;
         this.firstName = firstName;
         this.lastName = lastName;

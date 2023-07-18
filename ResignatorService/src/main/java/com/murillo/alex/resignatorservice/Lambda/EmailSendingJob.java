@@ -1,6 +1,8 @@
 package com.murillo.alex.resignatorservice.Lambda;
 
 import com.murillo.alex.resignatorservice.Lambda.Entity.EmailData;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -9,8 +11,12 @@ import software.amazon.awssdk.services.ses.SesClient;
 import software.amazon.awssdk.services.ses.model.*;
 
 public class EmailSendingJob implements Job {
+    private final Logger log = LogManager.getLogger();
+
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
+        log.info("EmailSendingJob execute method activated.");
+
         // Get the emailData from the JobExecutionContext
         EmailData emailData = (EmailData) context.getJobDetail().getJobDataMap().get("emailData");
 
@@ -28,7 +34,7 @@ public class EmailSendingJob implements Job {
 
         try {
             // Specify the sender email address (must be verified in AWS SES)
-            String senderAddress = "your_verified_sender@example.com";
+            String senderAddress = "alex.d.murillo@protonmail.com";
 
             // Create the content for the email
             Content subjectContent = Content.builder().data(subject).build();
