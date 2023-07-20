@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="I'm so close.">
-      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailGenerationActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Dependency/ServiceComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/LambdaActivityRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/LambdaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/LambdaResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Utils/NullUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.aws-sam/build.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.aws-sam/build.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResignatorService/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailFinishingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFinishingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailFormattingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormattingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailGenerationLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailGenerationLambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/EmailSendingJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailSendingJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/Entity/EmailData.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Results/EmailGenerationResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Lambda/Requests/EmailGenerationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +217,7 @@
       <workItem from="1689690415789" duration="5776000" />
       <workItem from="1689706729793" duration="4586000" />
       <workItem from="1689864465863" duration="585000" />
-      <workItem from="1689865062328" duration="9239000" />
+      <workItem from="1689865062328" duration="11612000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -409,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689711222018</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="I'm so close.">
+      <option name="closed" value="true" />
+      <created>1689882894982</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689882894982</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -20,7 +20,7 @@ Resources:
             # CORS Configuration START
             Cors:
               AllowMethods: "'GET,POST,PUT,DELETE,OPTIONS'"
-              AllowHeaders: "'content-type,X-Amz-Date,authorization,X-Api-Key,X-Amz-Security-Token'"
+              AllowHeaders: "'content-type'"
               AllowOrigin: "'*'"
             # CORS Configuration END
 
