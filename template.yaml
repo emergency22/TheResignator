@@ -19,9 +19,9 @@ Resources:
             Method: POST
             # CORS Configuration START
             Cors:
-              AllowMethods: "'POST'"
-              AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
-              AllowOrigin: "'http://localhost:63342'"
+              AllowMethods: "'GET,POST,PUT,DELETE,OPTIONS'"
+              AllowHeaders: "'content-type'"
+              AllowOrigin: "'*'"
             # CORS Configuration END
 
 Outputs:

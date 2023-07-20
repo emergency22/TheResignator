@@ -1,17 +1,17 @@
-package com.murillo.alex.resignatorservice.Lambda.Entity;
+package com.murillo.alex.resignatorservice.Activity.Results;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class EmailData {
+public class EmailGenerationResult {
 
     private final String recipientAddress;
     private final String subject;
     private final Date executionDate;
     private final String body;
 
-    public EmailData(String recipientAddress, String subject, Date executionDateString, String body) {
+    public EmailGenerationResult(String recipientAddress, String subject, Date executionDateString, String body) {
         this.recipientAddress = recipientAddress;
         this.subject = subject;
         this.executionDate = parseExecutionDate(String.valueOf(executionDateString));

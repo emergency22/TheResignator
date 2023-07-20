@@ -1,8 +1,7 @@
-package com.murillo.alex.resignatorservice.Lambda;
+package com.murillo.alex.resignatorservice.Activity;
 
-import com.murillo.alex.resignatorservice.Lambda.Entity.EmailData;
+import com.murillo.alex.resignatorservice.Activity.Results.EmailGenerationResult;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
@@ -33,7 +32,7 @@ public class EmailFinishingService {
         this.lastDay = lastDay;
     }
 
-    public EmailData formatEmail() {
+    public EmailGenerationResult formatEmail() {
         log.info("EmailFinishingService formatEmail method activated.");
 
         String subject = "Formal Letter of Resignation";
@@ -65,7 +64,7 @@ public class EmailFinishingService {
         //for testing
         System.out.println(body);
 
-        return new EmailData(this.recipientEmail, subject, this.executionDate, body.toString());
+        return new EmailGenerationResult(this.recipientEmail, subject, this.executionDate, body.toString());
     }
 
 }
