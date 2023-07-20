@@ -1,11 +1,9 @@
-package com.murillo.alex.resignatorservice.Lambda.Requests;
+package com.murillo.alex.resignatorservice.Activity.Requests;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
-
-import java.text.SimpleDateFormat;
 
 @JsonDeserialize(builder = EmailGenerationRequest.Builder.class)
 public class EmailGenerationRequest {

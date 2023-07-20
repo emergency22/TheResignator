@@ -1,6 +1,6 @@
-package com.murillo.alex.resignatorservice.Lambda;
+package com.murillo.alex.resignatorservice.Activity;
 
-import com.murillo.alex.resignatorservice.Lambda.Entity.EmailData;
+import com.murillo.alex.resignatorservice.Activity.Results.EmailGenerationResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.Job;
@@ -18,7 +18,7 @@ public class EmailSendingJob implements Job {
         log.info("EmailSendingJob execute method activated.");
 
         // Get the emailData from the JobExecutionContext
-        EmailData emailData = (EmailData) context.getJobDetail().getJobDataMap().get("emailData");
+        EmailGenerationResult emailData = (EmailGenerationResult) context.getJobDetail().getJobDataMap().get("emailData");
 
         // Prepare the email content
         String recipientAddress = emailData.getRecipientAddress();

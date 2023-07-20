@@ -1,14 +1,16 @@
-package com.murillo.alex.resignatorservice.Lambda;
+package com.murillo.alex.resignatorservice.Activity;
 
-import com.murillo.alex.resignatorservice.Lambda.Requests.EmailGenerationRequest;
+import com.murillo.alex.resignatorservice.Activity.Requests.EmailGenerationRequest;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.murillo.alex.resignatorservice.Lambda.Entity.EmailData;
+import com.murillo.alex.resignatorservice.Activity.Results.EmailGenerationResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import javax.inject.Inject;
 
 public class EmailFormattingService {
     private final Logger log = LogManager.getLogger();
@@ -25,10 +27,11 @@ public class EmailFormattingService {
 
     private EmailFinishingService emailFinishingService;
 
+    @Inject
     public EmailFormattingService() {
     }
 
-    public EmailData formatData(EmailGenerationRequest emailGenerationRequest) {
+    public EmailGenerationResult formatData(EmailGenerationRequest emailGenerationRequest) {
         log.info("EmailFormattingService formatData method activated.");
 
         formattedSenderEmail = emailGenerationRequest.getSenderEmail();
