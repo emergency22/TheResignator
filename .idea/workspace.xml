@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="I'm so close." />
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Omg its finally working.">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormattingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormattingService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,6 +116,7 @@
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\web\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\web" />
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\gradle" />
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\web\static_assets" />
       <recent name="C:\Users\mcfdf\GoogleDrive\A.D. Murillo LLC\Job Quitting Service\TheResignator\TheResignator\ResignatorService" />
@@ -214,6 +219,8 @@
       <workItem from="1689706729793" duration="4586000" />
       <workItem from="1689864465863" duration="585000" />
       <workItem from="1689865062328" duration="11647000" />
+      <workItem from="1689887306930" duration="107000" />
+      <workItem from="1689948893749" duration="13512000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -407,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689887200868</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Omg its finally working.">
+      <option name="closed" value="true" />
+      <created>1689964767249</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689964767249</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +445,8 @@
     <MESSAGE value="Backend nearing completion." />
     <MESSAGE value="Backend nearing completion for reals this time." />
     <MESSAGE value="I'm so close." />
-    <option name="LAST_COMMIT_MESSAGE" value="I'm so close." />
+    <MESSAGE value="Omg its finally working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Omg its finally working." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
