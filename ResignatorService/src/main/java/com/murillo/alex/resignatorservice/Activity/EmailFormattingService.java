@@ -61,12 +61,12 @@ public class EmailFormattingService {
         return capitalizedFullName.toString().trim();
     }
 
-    private String formatDate(SimpleDateFormat inputDate) {
-        Date date = new Date(String.valueOf(inputDate));
-        SimpleDateFormat formatter = new SimpleDateFormat("MMMM d, yyyy");
-        String formattedDate = formatter.format(date);
-        return formattedDate;
-    }
+//    private String formatDate(SimpleDateFormat inputDate) {
+//        Date date = new Date(String.valueOf(inputDate));
+//        SimpleDateFormat formatter = new SimpleDateFormat("MMMM d, yyyy");
+//        String formattedDate = formatter.format(date);
+//        return formattedDate;
+//    }
 
 //    private Date parseDateFromString(String dateString) {
 //        try {
