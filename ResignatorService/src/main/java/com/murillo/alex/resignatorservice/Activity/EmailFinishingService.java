@@ -15,12 +15,12 @@ public class EmailFinishingService {
     private final String organization;
     private final String recipientFirstName;
     private final String recipientEmail;
-    private final Date executionDate;
-    private final Date lastDay;
+    private final String executionDate;
+    private final String lastDay;
     private final Logger log = LogManager.getLogger();
 
 
-    public EmailFinishingService(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, Date executionDate, Date lastDay) {
+    public EmailFinishingService(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, String executionDate, String lastDay) {
         this.senderEmail = senderEmail;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -35,19 +35,21 @@ public class EmailFinishingService {
     public EmailGenerationResult formatEmail() {
         log.info("EmailFinishingService formatEmail method activated.");
 
+
         String subject = "Formal Letter of Resignation";
 
         StringBuilder body = new StringBuilder();
 
+        body.append("\n\n\n");
         body.append("Formal Letter of Resignation").append("\n\n\n");
-        body.append(this.executionDate.toString()).append("\n\n");
-        body.append("Dear ").append(this.recipientFirstName).append("\n\n");
+        body.append(this.executionDate).append("\n\n");
+        body.append("Dear ").append(this.recipientFirstName).append(",").append("\n\n");
         body.append("Please accept this letter as my formal resignation from my position as ")
                 .append(this.position)
                 .append(" at ")
                 .append(this.organization)
                 .append(". My last day will be on ")
-                .append(this.lastDay)
+                .append(this.lastDay).append(".")
                 .append("\n\n");
         body.append("I appreciate the opportunities for growth and development you have provided during my time at ")
                 .append(this.organization)
@@ -59,10 +61,10 @@ public class EmailFinishingService {
                 .append("\n\n\n");
         body.append("Sincerely, ")
                 .append(this.firstName).append(" ").append(this.lastName).append("\n")
-                .append(this.senderEmail).append("\n");
+                .append(this.senderEmail).append("\n\n\n");;
 
         //for testing
-        System.out.println(body);
+//        System.out.println(body);
 
         return new EmailGenerationResult(this.recipientEmail, subject, this.executionDate, body.toString());
     }

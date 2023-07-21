@@ -13,11 +13,14 @@ export class QuitClient {
             lastDay: lastDay
         };
 
+        const jsonData = JSON.stringify(data);
+
         console.log(data);
 
-        axios.post('http://localhost:3000/resignator', data)
+        axios.post('http://localhost:3000/resignator', jsonData)
             .then((result) => console.log(result))
             .catch((error) => console.log(error));
     }
+
 
 }

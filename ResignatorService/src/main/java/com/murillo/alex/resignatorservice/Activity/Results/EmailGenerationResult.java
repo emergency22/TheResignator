@@ -8,27 +8,27 @@ public class EmailGenerationResult {
 
     private final String recipientAddress;
     private final String subject;
-    private final Date executionDate;
+    private final String executionDate;
     private final String body;
 
-    public EmailGenerationResult(String recipientAddress, String subject, Date executionDateString, String body) {
+    public EmailGenerationResult(String recipientAddress, String subject, String executionDate, String body) {
         this.recipientAddress = recipientAddress;
         this.subject = subject;
-        this.executionDate = parseExecutionDate(String.valueOf(executionDateString));
+        this.executionDate = executionDate;
         this.body = body;
     }
 
-    private Date parseExecutionDate(String executionDateString) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            return sdf.parse(executionDateString);
-        } catch (ParseException e) {
-            e.printStackTrace(); // or throw an exception based on your use case
-            return null;
-        }
-    }
+//    private Date parseExecutionDate(String executionDateString) {
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        try {
+//            return sdf.parse(executionDateString);
+//        } catch (ParseException e) {
+//            e.printStackTrace(); // or throw an exception based on your use case
+//            return null;
+//        }
+//    }
 
-    public Date getExecutionDate() {
+    public String getExecutionDate() {
         return this.executionDate;
     }
 
@@ -42,5 +42,15 @@ public class EmailGenerationResult {
 
     public String getBody() {
         return this.body;
+    }
+
+    @Override
+    public String toString() {
+        return "EmailGenerationResult{" +
+                "recipientAddress='" + recipientAddress + '\'' +
+                ", subject='" + subject + '\'' +
+                ", executionDate='" + executionDate + '\'' +
+                ", body='" + body + '\'' +
+                '}';
     }
 }

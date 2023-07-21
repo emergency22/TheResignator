@@ -22,8 +22,8 @@ public class EmailFormattingService {
     private String formattedOrganization;
     private String formattedRecipientFirstName;
     private String formattedRecipientEmail;
-    private Date formattedExecutionDate;
-    private Date formattedLastDay;
+    private String formattedExecutionDate;
+    private String formattedLastDay;
 
     private EmailFinishingService emailFinishingService;
 
@@ -41,8 +41,8 @@ public class EmailFormattingService {
         formattedOrganization = formatName(emailGenerationRequest.getOrganization());
         formattedRecipientFirstName = formatName(emailGenerationRequest.getRecipientFirstName());
         formattedRecipientEmail = emailGenerationRequest.getRecipientEmail();
-        formattedExecutionDate = parseDateFromString(emailGenerationRequest.getExecutionDate());
-        formattedLastDay = parseDateFromString(emailGenerationRequest.getLastDay());
+        formattedExecutionDate = emailGenerationRequest.getExecutionDate();
+        formattedLastDay = emailGenerationRequest.getLastDay();
 
         this.emailFinishingService = new EmailFinishingService(formattedSenderEmail, formattedFirstName, formattedLastName, formattedPosition, formattedOrganization, formattedRecipientFirstName, formattedRecipientEmail, formattedExecutionDate, formattedLastDay);
         return emailFinishingService.formatEmail();
@@ -68,15 +68,15 @@ public class EmailFormattingService {
         return formattedDate;
     }
 
-    private Date parseDateFromString(String dateString) {
-        try {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-            return dateFormat.parse(dateString);
-        } catch (ParseException e) {
-            log.error("Error parsing date from string: {}", dateString, e);
-            return null;
-        }
-    }
+//    private Date parseDateFromString(String dateString) {
+//        try {
+//            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+//            return dateFormat.parse(dateString);
+//        } catch (ParseException e) {
+//            log.error("Error parsing date from string: {}", dateString, e);
+//            return null;
+//        }
+//    }
 
 
 
