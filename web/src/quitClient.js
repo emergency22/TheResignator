@@ -1,6 +1,8 @@
 export class QuitClient {
+
+    //Takes in all the information from the form and starts the API POST request to the backend.
     quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
-        console.log("inside QuitThisJob");
+
         const data = {
             senderEmail: senderEmail,
             firstName: firstName,
