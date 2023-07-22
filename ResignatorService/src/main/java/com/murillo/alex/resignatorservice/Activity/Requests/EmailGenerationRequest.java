@@ -17,18 +17,6 @@ public class EmailGenerationRequest {
     private final String executionDate;
     private final String lastDay;
 
-    // Default constructor for Jackson deserialization
-    public EmailGenerationRequest() {
-        this.senderEmail = null;
-        this.firstName = null;
-        this.lastName = null;
-        this.position = null;
-        this.organization = null;
-        this.recipientFirstName = null;
-        this.recipientEmail = null;
-        this.executionDate = null;
-        this.lastDay = null;
-    }
 
     private EmailGenerationRequest(String senderEmail, String firstName, String lastName, String position, String organization, String recipientFirstName, String recipientEmail, String executionDate, String lastDay) {
         this.senderEmail = senderEmail;
@@ -76,21 +64,6 @@ public class EmailGenerationRequest {
 
     public String getLastDay() {
         return lastDay;
-    }
-
-    @Override
-    public String toString() {
-        return "EmailGenerationRequest{" +
-                "senderEmail='" + senderEmail + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", position='" + position + '\'' +
-                ", organization='" + organization + '\'' +
-                ", recipientFirstName='" + recipientFirstName + '\'' +
-                ", recipientEmail='" + recipientEmail + '\'' +
-                ", executionDate=" + executionDate +
-                ", lastDay=" + lastDay +
-                '}';
     }
 
     // Factory method with JsonCreator annotation

@@ -39,7 +39,7 @@ async function confirmQuit(event) {
             document.getElementById('ready').innerHTML = "";
             document.getElementById('theFormArea').innerHTML = "";
             document.getElementById('theFormArea').innerHTML +=
-                `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br>`;
+                `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br><div id="emailSection"></div>`;
             console.log("Quitting job...");
         } else {
             // User clicked "Cancel" or "No"

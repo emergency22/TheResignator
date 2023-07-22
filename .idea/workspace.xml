@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Add preliminary README">
+    <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Clean up code for front end.">
+      <change beforePath="$PROJECT_DIR$/.aws-sam/build.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.aws-sam/build.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/indexFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/indexFunctionality.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFinishingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFinishingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormattingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailFormattingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailGenerationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailGenerationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/EmailSendingJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Requests/EmailGenerationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Results/EmailGenerationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/ResignatorService/src/main/java/com/murillo/alex/resignatorservice/Activity/Results/EmailGenerationResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templateOrig.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/paidUserFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/paidUserFunctionality.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/quitClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/quitClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static_assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static_assets/paidUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/paidUser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +230,7 @@
       <workItem from="1689865062328" duration="11647000" />
       <workItem from="1689887306930" duration="107000" />
       <workItem from="1689948893749" duration="15620000" />
-      <workItem from="1690044081306" duration="1294000" />
+      <workItem from="1690044081306" duration="7888000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
@@ -434,7 +440,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689965687256</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Clean up code for front end.">
+      <option name="closed" value="true" />
+      <created>1690046114457</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1690046114457</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +473,8 @@
     <MESSAGE value="I'm so close." />
     <MESSAGE value="Omg its finally working." />
     <MESSAGE value="Add preliminary README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add preliminary README" />
+    <MESSAGE value="Clean up code for front end." />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up code for front end." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
