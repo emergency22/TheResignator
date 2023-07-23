@@ -1,8 +1,6 @@
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
+<div style="text-align: center">
 
-<h3 align="center">The Resignator</h3>
+<h2 align="center">The Resignator</h2>
 ___
 
 ## Synopsis
@@ -12,6 +10,7 @@ This project was inspired after reading [this](https://fortune-com.cdn.ampprojec
 ---
 
 ## Lessons Learned
+</div><div style="text-align: left">
 
 1. Browsers don't like pulling CSV files without a server enabled.
 2. How to parse a CSV file in Javascript.
@@ -19,11 +18,12 @@ This project was inspired after reading [this](https://fortune-com.cdn.ampprojec
 4. HTML's "font" tag has been deprecated in favor of CSS. Back in my day, we had to use font tags in the snow. Both ways.
 5. An "await" before using sessionStorage.setItem() will save a lot of headache.
 6. CORS errors. Nuff said.
+</div><div style="text-align: center">
 
 ---
 
 ## Build Tools
-
+</div><div style="text-align: left">
 * Java
 * Javascript
 * HTML
@@ -41,14 +41,17 @@ This project was inspired after reading [this](https://fortune-com.cdn.ampprojec
 * AWS Lambda
 * Docker
 * Postman
-  
+</div><div style="text-align: center">
+
 ---
 
-## View This Project
+[//]: # (## View This Project)
 
-[![Youtube Video](resources/images/yt_image.JPG)](https://youtu.be/FYJvZrxUK0c)
+[//]: # ()
+[//]: # ([![Youtube Video]&#40;resources/images/yt_image.JPG&#41;]&#40;https://youtu.be/FYJvZrxUK0c&#41;)
 
-<p>View this project: <a href="https://youtu.be/FYJvZrxUK0c"><b>here<b></a>.</p>
+[//]: # ()
+[//]: # (<p>View this project: <a href="https://youtu.be/FYJvZrxUK0c"><b>here<b></a>.</p>)
 
 ---
 
