@@ -1,9 +1,5 @@
 package com.murillo.alex.resignatorservice.Activity.Results;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class EmailGenerationResult {
 
     private final String recipientAddress;
@@ -17,16 +13,6 @@ public class EmailGenerationResult {
         this.executionDate = executionDate;
         this.body = body;
     }
-
-//    private Date parseExecutionDate(String executionDateString) {
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//        try {
-//            return sdf.parse(executionDateString);
-//        } catch (ParseException e) {
-//            e.printStackTrace(); // or throw an exception based on your use case
-//            return null;
-//        }
-//    }
 
     public String getExecutionDate() {
         return this.executionDate;

@@ -2,8 +2,6 @@ package com.murillo.alex.resignatorservice.Activity;
 
 import com.murillo.alex.resignatorservice.Activity.Results.EmailGenerationResult;
 
-import java.util.Date;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,6 +30,9 @@ public class EmailFinishingService {
         this.lastDay = lastDay;
     }
 
+    /**
+     * Formats the email body.
+     */
     public EmailGenerationResult formatEmail() {
         log.info("EmailFinishingService formatEmail method activated.");
 
@@ -62,9 +63,6 @@ public class EmailFinishingService {
         body.append("Sincerely, ")
                 .append(this.firstName).append(" ").append(this.lastName).append("\n")
                 .append(this.senderEmail).append("\n\n\n");;
-
-        //for testing
-//        System.out.println(body);
 
         return new EmailGenerationResult(this.recipientEmail, subject, this.executionDate, body.toString());
     }

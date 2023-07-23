@@ -1,59 +1,60 @@
 import { QuitClient }  from './quitClient.js';
 const quitClient = new QuitClient();
 
-    async function confirmQuit(event) {
-        event.preventDefault(); // Prevents the default form submission
+//Verifies that all form fields are filled and warns the user.
+async function confirmQuit(event) {
+    event.preventDefault(); // Prevents the default form submission
 
-        const submissionData = document.getElementById('theForm');
-        const formData = new FormData(submissionData);
+    const submissionData = document.getElementById('theForm');
+    const formData = new FormData(submissionData);
 
-        // Check if any field is empty
-        let isValid = true;
-        formData.forEach((value) => {
-            if (value.trim() === '') {
-                isValid = false;
-                return;
-            }
-        });
-
-        if (isValid) {
-            const confirmation = confirm(
-                "There are no takesies backsies. \n \n Press OK to quit your job, or Cancel to stay in your job."
-            );
-
-            if (confirmation) {
-                // User clicked "OK" or "Yes"
-                const senderEmail = sessionStorage.getItem("validatedEmail");
-                const firstName = formData.get('firstName');
-                const lastName = formData.get('lastName');
-                const position = formData.get('position');
-                const organization = formData.get('organization');
-                const recipientFirstName = formData.get('recipientFirstName');
-                const recipientEmail = formData.get('recipientEmail');
-                const executionDate = formData.get('executionDate');
-                const lastDay = formData.get('lastDay');
-
-                quitClient.quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
-
-                document.getElementById('ready').innerHTML = "";
-                document.getElementById('theFormArea').innerHTML = "";
-                document.getElementById('theFormArea').innerHTML +=
-                    `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br>`;
-                console.log("Quitting job...");
-            } else {
-                // User clicked "Cancel" or "No"
-                document.getElementById('ready').innerHTML = "";
-                document.getElementById('disclaimer').innerHTML = "";
-                document.getElementById('theFormArea').innerHTML = "";
-                document.getElementById('theFormArea').innerHTML +=
-                    `<h5><div class="text-center">Cancelled. Maybe go for a hike instead? <a href="https://www.nps.gov">https://www.nps.gov</a></div></h5><br><br>`;
-                console.log("Job quitting canceled.");
-            }
-        } else {
-            alert("Please fill in all the required fields.");
+    // Check if any field is empty
+    let isValid = true;
+    formData.forEach((value) => {
+        if (value.trim() === '') {
+            isValid = false;
+            return;
         }
-    }
+    });
 
+    if (isValid) {
+        const confirmation = confirm(
+            "There are no takesies backsies. \n \n Press OK to quit your job, or Cancel to stay in your job."
+        );
+
+        if (confirmation) {
+            // User clicked "OK" or "Yes"
+            const senderEmail = sessionStorage.getItem("validatedEmail");
+            const firstName = formData.get('firstName');
+            const lastName = formData.get('lastName');
+            const position = formData.get('position');
+            const organization = formData.get('organization');
+            const recipientFirstName = formData.get('recipientFirstName');
+            const recipientEmail = formData.get('recipientEmail');
+            const executionDate = formData.get('executionDate');
+            const lastDay = formData.get('lastDay');
+
+            quitClient.quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay);
+
+            document.getElementById('ready').innerHTML = "";
+            document.getElementById('theFormArea').innerHTML = "";
+            document.getElementById('theFormArea').innerHTML +=
+                `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br><div id="emailSection"></div>`;
+            console.log("Quitting job...");
+        } else {
+            // User clicked "Cancel" or "No"
+            document.getElementById('ready').innerHTML = "";
+            document.getElementById('disclaimer').innerHTML = "";
+            document.getElementById('theFormArea').innerHTML = "";
+            document.getElementById('theFormArea').innerHTML +=
+                `<h5><div class="text-center">Cancelled. Maybe go for a hike instead? <a href="https://www.nps.gov">https://www.nps.gov</a></div></h5><br><br>`;
+            console.log("Job quitting canceled.");
+        }
+    } else {
+        alert("Please fill in all the required fields.");
+    }
+}
+//Displays the form that captures all the data
 function displayForm() {
     document.getElementById('theFormArea').innerHTML = "";
 

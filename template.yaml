@@ -23,8 +23,3 @@ Resources:
               AllowHeaders: "'content-type'"
               AllowOrigin: "'*'"
             # CORS Configuration END
-
-Outputs:
-  ApiEndpoint:
-    Description: API endpoint URL for the EmailGenerationLambda function
-    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/resignator'

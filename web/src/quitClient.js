@@ -1,6 +1,8 @@
 export class QuitClient {
-    quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
-        console.log("inside QuitThisJob");
+
+    //Takes in all the information from the form and starts the API POST request to the backend.
+    async quitThisJob(senderEmail, firstName, lastName, position, organization, recipientFirstName, recipientEmail, executionDate, lastDay) {
+
         const data = {
             senderEmail: senderEmail,
             firstName: firstName,
@@ -17,10 +19,9 @@ export class QuitClient {
 
         console.log(data);
 
-        axios.post('http://localhost:3000/resignator', jsonData)
+        await axios.post('http://localhost:3000/resignator', jsonData)
             .then((result) => console.log(result))
             .catch((error) => console.log(error));
+
     }
-
-
 }

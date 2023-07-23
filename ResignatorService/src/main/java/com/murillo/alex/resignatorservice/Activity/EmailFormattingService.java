@@ -2,10 +2,6 @@ package com.murillo.alex.resignatorservice.Activity;
 
 import com.murillo.alex.resignatorservice.Activity.Requests.EmailGenerationRequest;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import com.murillo.alex.resignatorservice.Activity.Results.EmailGenerationResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,6 +27,9 @@ public class EmailFormattingService {
     public EmailFormattingService() {
     }
 
+    /**
+     *
+     */
     public EmailGenerationResult formatData(EmailGenerationRequest emailGenerationRequest) {
         log.info("EmailFormattingService formatData method activated.");
 
@@ -48,6 +47,9 @@ public class EmailFormattingService {
         return emailFinishingService.formatEmail();
     }
 
+    /**
+     * Formats input strings such as names and capitalizes letters.
+     */
     private String formatName(String recipientName) {
         String[] words = recipientName.split("\\s+");
         StringBuilder capitalizedFullName = new StringBuilder();
@@ -60,24 +62,4 @@ public class EmailFormattingService {
         }
         return capitalizedFullName.toString().trim();
     }
-
-//    private String formatDate(SimpleDateFormat inputDate) {
-//        Date date = new Date(String.valueOf(inputDate));
-//        SimpleDateFormat formatter = new SimpleDateFormat("MMMM d, yyyy");
-//        String formattedDate = formatter.format(date);
-//        return formattedDate;
-//    }
-
-//    private Date parseDateFromString(String dateString) {
-//        try {
-//            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-//            return dateFormat.parse(dateString);
-//        } catch (ParseException e) {
-//            log.error("Error parsing date from string: {}", dateString, e);
-//            return null;
-//        }
-//    }
-
-
-
 }

@@ -1,3 +1,4 @@
+//Parses the CSV file and splits up domains, returning an array of separated domains.
 function parseCSV(csv) {
     const rows = csv.split('\n');
     const data = [];
@@ -10,6 +11,7 @@ function parseCSV(csv) {
     return data;
 }
 
+//Reads from the CSV files, parses it via the parseCSV function, and returns true of false if a match is found with the domain input
 function readCSV(file, domain) {
     return fetch(file)
         .then(response => response.text())
@@ -19,15 +21,16 @@ function readCSV(file, domain) {
             for (let i = 0; i < data.length; i++) {
                 if (domain === data[i][0]) {
 
-                    return Promise.resolve(false); // Reject the Promise if domain is found
+                    return Promise.resolve(false);
                 }
             }
-            return Promise.resolve(true); // Resolve the Promise if domain is not found
+            return Promise.resolve(true);
         });
 }
 
+//Checks if the email is in a valid format and if the domain matches banned domains
 async function checkEmail(event) {
-    event.preventDefault(); // Prevents the default form submission
+    event.preventDefault();
 
     const formData = new FormData(document.getElementById('theForm'));
     const emailFromTheForm = formData.get('email');
@@ -37,7 +40,6 @@ async function checkEmail(event) {
     if (emailFromTheForm.trim() === '') {
         isValid = false;
     } else {
-        // Check if the email is in a valid format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         isValid = emailRegex.test(emailFromTheForm);
     }
@@ -60,7 +62,7 @@ async function checkEmail(event) {
     }
 }
 
-
+//Displays the email input form
 function displayForm() {
     document.getElementById('emailForm').innerHTML = "";
 
