@@ -7,17 +7,19 @@
 
 This project was inspired after reading [this](https://fortune-com.cdn.ampproject.org/c/s/fortune.com/2023/06/09/startup-exit-japan-quit-job-for-you/amp/) article. Essentially, I wanted to create a similar service that could take in the information of a person who wanted to quit their job, and the service would process the data and "deliver" an email on their behalf. If this project was launched into the real world, I would probably utilize Amazon Pay and Amazon Simple Email Service, but as it is, this is just a quick home brew project that is only hosted locally and no email is actually delivered.
 
+
 ---
 ## Lessons Learned
-</div><div style="text-align: left">
 
-1. Browsers don't like pulling CSV files without a server enabled.
-2. How to parse a CSV file in Javascript.
-3. There's more than one script type that can be accepted into the head section of an HTML file.
-4. HTML's "font" tag has been deprecated in favor of CSS. Back in my day, we had to use font tags in the snow. Both ways.
-5. An "await" before using sessionStorage.setItem() will save a lot of headache.
+
+<div style="text-align: left">
+1. Browsers don't like pulling CSV files without a server enabled.<br>
+2. How to parse a CSV file in Javascript.<br>
+3. There's more than one script type that can be accepted into the head section of an HTML file.<br>
+4. HTML's "font" tag has been deprecated in favor of CSS. Back in my day, we had to use font tags in the snow. Both ways.<br>
+5. An "await" before using sessionStorage.setItem() will save a lot of headache.<br>
 6. CORS errors. Nuff said.
-</div><div style="text-align: center">
+</div>
 
 ---
 ## Build Tools
@@ -43,7 +45,7 @@ This project was inspired after reading [this](https://fortune-com.cdn.ampprojec
 * AWS Lambda <br>
 * Docker <br>
 * Postman <br>
-</div><div style="text-align: center">
+</div>
 
 ---
 [//]: # (## View This Project)
