@@ -57,6 +57,15 @@ This project was inspired after reading [this](https://fortune-com.cdn.ampprojec
 [//]: # (<p>View this project: <a href="https://youtu.be/FYJvZrxUK0c"><b>here<b></a>.</p>)
 
 ---
+## How to Launch
+1. Launch front end from the web directory with ```http-server``` <br>
+2. Start Docker <br>
+3. From the root directory, build via ```sam build --use-container``` <br>
+4. From the root directory: ```sam local start-api``` to start the backend in a separate terminal<br>
+5. Open index.html in your web browser via ```localhost:8080```
+6. View output in the backend terminal. :)
+
+---
 ## Contact
 
 Alex Murillo - alex.d.murillo@protonmail.com

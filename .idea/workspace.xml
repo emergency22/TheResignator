@@ -7,8 +7,6 @@
     <list default="true" id="7c090826-15a4-4df6-b6d8-9c9888e5a5d9" name="Changes" comment="Code clean up.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,6 +226,7 @@
       <workItem from="1690138642450" duration="399000" />
       <workItem from="1690139051292" duration="246000" />
       <workItem from="1690142998710" duration="94000" />
+      <workItem from="1690158685949" duration="1344000" />
     </task>
     <task id="LOCAL-00001" summary="Add SDK.">
       <option name="closed" value="true" />
