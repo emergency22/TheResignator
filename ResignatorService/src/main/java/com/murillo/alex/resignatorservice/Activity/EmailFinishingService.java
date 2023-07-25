@@ -36,33 +36,29 @@ public class EmailFinishingService {
     public EmailGenerationResult formatEmail() {
         log.info("EmailFinishingService formatEmail method activated.");
 
-
         String subject = "Formal Letter of Resignation";
 
         StringBuilder body = new StringBuilder();
 
-        body.append("\n\n\n");
-        body.append("Formal Letter of Resignation").append("\n\n\n");
-        body.append(this.executionDate).append("\n\n");
-        body.append("Dear ").append(this.recipientFirstName).append(",").append("\n\n");
+        body.append("Dear ").append(this.recipientFirstName).append(",").append("<br><br>");
         body.append("Please accept this letter as my formal resignation from my position as ")
                 .append(this.position)
                 .append(" at ")
                 .append(this.organization)
                 .append(". My last day will be on ")
                 .append(this.lastDay).append(".")
-                .append("\n\n");
+                .append("<br><br>");
         body.append("I appreciate the opportunities for growth and development you have provided during my time at ")
                 .append(this.organization)
                 .append(". Thank you for your guidance and support.")
-                .append("\n\n");
+                .append("<br><br>");
         body.append("Please let me know if I can be of any help during the transition period. I wish you and ")
                 .append(this.organization)
                 .append(" all the best.")
-                .append("\n\n\n");
+                .append("<br><br>");
         body.append("Sincerely, ")
-                .append(this.firstName).append(" ").append(this.lastName).append("\n")
-                .append(this.senderEmail).append("\n\n\n");;
+                .append(this.firstName).append(" ").append(this.lastName).append("<br>")
+                .append(this.senderEmail).append("<br><br><br>");
 
         return new EmailGenerationResult(this.recipientEmail, subject, this.executionDate, body.toString());
     }

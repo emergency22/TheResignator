@@ -12,7 +12,7 @@ function parseCSV(csv) {
 }
 
 //Reads from the CSV files, parses it via the parseCSV function, and returns true of false if a match is found with the domain input
-function readCSV(file, domain) {
+async function readCSV(file, domain) {
     return fetch(file)
         .then(response => response.text())
         .then(csvString => {

@@ -19,9 +19,37 @@ export class QuitClient {
 
         console.log(data);
 
-        await axios.post('http://localhost:3000/resignator', jsonData)
-            .then((result) => console.log(result))
-            .catch((error) => console.log(error));
+        axios.post('http://localhost:3000/resignator', jsonData)
+            .then((result) => {
+                console.log(result);
+                console.log("1", result.data);  //This is a step in the right direction
+                console.log("subject", result.data.subject);
+                const backendRecipientAddress = result.data.recipientAddress;
+                const backendSubject = result.data.subject;
+                const backendExecutionDate = result.data.executionDate;
+                const backendBody = result.data.body;
+
+                document.getElementById('emailSection').innerHTML = "";
+                document.getElementById('emailSection').innerHTML += `
+                <h5>We will send this email: </h5><br>
+                
+                Recipient Email: ${backendRecipientAddress} <br>
+                Subject: ${backendSubject} <br>
+                
+                ${backendExecutionDate} <br><br>
+                
+                ${backendBody} <br>
+                `
+
+
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        // document.getElementById('theFormArea').innerHTML = "";
+        // document.getElementById('theFormArea').innerHTML +=
+        //     `<h5><div class="text-center">That's it. Consider it done.</div></h5><br><br><div id="emailSection"></div>`;
 
     }
 }
