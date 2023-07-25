@@ -62,11 +62,7 @@ This project was inspired after reading [this](https://fortune-com.cdn.ampprojec
 2. Start Docker <br>
 3. From the root directory, build via ```sam build --use-container``` <br>
 4. From the root directory: ```sam local start-api``` to start the backend in a separate terminal<br>
-<<<<<<< HEAD
 5. Open index.html in your web browser via ```localhost:8080/static_assets/```
-=======
-5. Open index.html in your web browser via ```localhost:8080```
->>>>>>> main
 6. View output in the backend terminal. :)
 
 ---
