@@ -48,13 +48,13 @@ This project was inspired after reading [this](https://fortune-com.cdn.ampprojec
 </div>
 
 ---
-[//]: # (## View This Project)
+## View This Project
 
-[//]: # ()
-[//]: # ([![Youtube Video]&#40;resources/images/yt_image.JPG&#41;]&#40;https://youtu.be/FYJvZrxUK0c&#41;)
 
-[//]: # ()
-[//]: # (<p>View this project: <a href="https://youtu.be/FYJvZrxUK0c"><b>here<b></a>.</p>)
+[![Youtube Video](./web/static_assets/screenshot.png)](https://youtu.be/TVAu_UHDRqA)
+
+
+<p>View this project: <a href="https://youtu.be/TVAu_UHDRqA"><b>here<b></a>.</p>
 
 ---
 ## How to Launch
